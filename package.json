@@ -1,0 +1,19 @@
+{
+  "name": "eatsmart",
+  "version": "1.0.0",
+  "description": "This is a website about healthy nutrition, it's consists of various recipes",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Radosław Kołoczek",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
