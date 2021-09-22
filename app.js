@@ -1,4 +1,5 @@
 const express = require("express");
+
 const app = express();
 
 const mainPages = require("./routes/mainPages");
@@ -10,3 +11,10 @@ app.use("/categories", categories);
 app.listen(4000, () => {
   console.log("Server works");
 });
+
+// test eslint
+sayHellow();
+
+function sayHellow(name) {
+  return `heloow${name}`;
+}

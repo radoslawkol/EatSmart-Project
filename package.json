@@ -4,7 +4,9 @@
   "description": "This is a website about healthy nutrition, it's consists of various recipes",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "'./node_modules/.bin/eslint' . --fix"
   },
   "author": "Radosław Kołoczek",
   "license": "ISC",
@@ -14,6 +16,9 @@
     "mongoose": "^6.0.7"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "nodemon": "^2.0.12"
   }
 }
