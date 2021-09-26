@@ -1,0 +1,120 @@
+// NAVIGATION
+
+.nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  background-color: $primary-color;
+  @media screen and (max-width: 840px) {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 840px) {
+      margin: 1rem 0;
+    }
+    &-img {
+      margin: 0 1rem;
+      width: 3rem;
+      height: 3rem;
+    }
+    &-name {
+      color: $secondary-color;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: none;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @media screen and (max-width: 840px) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin-right: 2rem;
+    list-style: none;
+    @media screen and (max-width: 840px) {
+      display: none;
+      flex-direction: column;
+    }
+
+    &.open {
+      display: flex;
+    }
+  }
+  &__dropdown-menu {
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    background-color: $primary-color;
+    // padding-left: 2rem;
+    @media screen and (max-width: 840px) {
+      position: static;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    @media screen and (max-width: 840px) {
+      //   display: flex;
+      align-items: center;
+    }
+
+    &--drop {
+      display: none;
+      @media screen and (max-width: 840px) {
+        padding-left: 2rem;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    height: 100%;
+    padding: 1rem 1.5rem;
+    color: $font-basic-color;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &__arrow {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    @media screen and (max-width: 840px) {
+      display: inline-block;
+    }
+  }
+
+  &__item:hover &__item--drop {
+    display: block;
+    @media screen and (max-width: 840px) {
+      display: none;
+    }
+  }
+  &__item--arrow.show &__item--drop {
+    display: block;
+  }
+}
