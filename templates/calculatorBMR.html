@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="calculatorWrapper">
+      <form class="calculatorBMR">
+        <label for="male" class="calculatorBMR__label">Mężczyzna</label>
+        <input class="calculatorBMR__radio" type="radio" name="gender" id="male" value="male" />
+
+        <label for="female" class="calculatorBMR__label">Kobieta</label>
+        <input class="calculatorBMR__radio" type="radio" name="gender" id="female" value="female" />
+
+        <label for="age" class="calculatorBMR__label">Wiek</label>
+        <input
+          type="number"
+          class="calculatorBMR__input"
+          id="age"
+          required
+          placeholder="Wpisz swój wiek..."
+        />
+
+        <label for="weight" class="calculatorBMR__label">Waga(kg)</label>
+        <input
+          type="number"
+          class="calculatorBMR__input"
+          id="weight"
+          required
+          placeholder="Wpisz swoją wagę(kg)"
+        />
+
+        <label for="height" class="calculatorBMR__label">Wzrost(cm)</label>
+        <input
+          type="number"
+          class="calculatorBMR__input"
+          id="height"
+          required
+          placeholder="Wpisz swój wzrost(cm)"
+        />
+
+        <label for="physicalActivity" class="calculatorBMR__label">Wzrost(cm)</label>
+        <select class="calculatorBMI__select" name="" id="selectBMR">
+          <option value="0" class="calculatorBMI__select-option">Prawie brak</option>
+          <option value="1" class="calculatorBMI__select-option">Lekka aktywność</option>
+          <option value="2" class="calculatorBMI__select-option">Umiarkowana aktywność</option>
+          <option value="3" class="calculatorBMI__select-option">Duża aktywność</option>
+          <option value="4" class="calculatorBMI__select-option">Bardzo duża aktywność</option>
+        </select>
+        <input type="submit" class="calculatorBMR__submit" value="Oblicz" />
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/big.js@6.0.0/big.min.js"></script>
+    <script src="/calculatorBMR.js"></script>
+  </body>
+</html>
