@@ -1,0 +1,179 @@
+// CALCULATOR BMI STYLES
+
+.mainBMI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  @media screen and (min-width: 576px) {
+    padding: 6rem;
+  }
+}
+
+.aboutBMI {
+  @media screen and (min-width: 992px) {
+    padding: 0 8rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 16rem;
+  }
+  @media screen and (min-width: 1400px) {
+    width: 70%;
+  }
+  &__title {
+    margin: 2rem 0;
+    color: $font-orange-color;
+    font-size: 1.8rem;
+  }
+  &__text {
+    font-size: 1.4rem;
+  }
+}
+
+.calculatorBMIWrapper {
+  width: 32rem;
+  margin: 6rem 0;
+  padding: 2rem;
+  box-shadow: $box-shadow-grey;
+  @media screen and (min-width: 576px) {
+    width: 38rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+}
+
+.calculatorBMI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem;
+
+  &__group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 1rem 0;
+  }
+
+  &__label {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  }
+  &__input {
+    padding: 0.5rem;
+  }
+
+  &__submit {
+    padding: 0.8rem 2rem;
+    margin: 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    background-color: $font-orange-color;
+    color: $font-white-color;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: $box-shadow-grey;
+    }
+    &:focus {
+      transform: scale(1);
+    }
+  }
+}
+
+.resultsBMI {
+  display: none;
+  text-align: center;
+  &__assessment {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  &__text {
+    margin: 1rem;
+    font-size: 1.4rem;
+    font-style: 1.6rem;
+  }
+}
+
+#errorMessageBMI {
+  display: none;
+  font-size: 1.4rem;
+  text-align: center;
+  color: red;
+}
+
+#resultsBMI__output {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.infoBMI {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 576px) {
+    padding: 4rem;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 6rem 8rem;
+  }
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 10rem;
+  }
+  @media screen and (min-width: 1600px) {
+    width: 60%;
+  }
+
+  &__table {
+    padding: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    box-shadow: $box-shadow-grey;
+    @media screen and (min-width: 992px) {
+      margin: 0 2rem;
+      width: 60%;
+    }
+  }
+
+  &__cell {
+    padding: 0.5rem;
+    &--head {
+      padding: 2rem;
+      color: $font-orange-color;
+    }
+  }
+
+  &__hints {
+    margin-top: 6rem;
+    padding: 2rem;
+    box-shadow: $box-shadow-grey;
+    @media screen and (min-width: 992px) {
+      margin: 0 2rem;
+      width: 40%;
+    }
+
+    &-text {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+    &-title {
+      margin: 1rem 0 2rem;
+      text-align: center;
+      color: $font-orange-color;
+      text-transform: uppercase;
+    }
+  }
+}

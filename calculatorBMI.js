@@ -3,15 +3,27 @@
 const weightInput = document.querySelector('#weight');
 const heightInput = document.querySelector('#height');
 const submitBtn = document.querySelector('.calculatorBMI__submit');
+const resultsBMI = document.querySelector('.resultsBMI');
+const assessmentBMI = document.querySelector('#assessmentBMI');
+const resultsBMIOutput = document.querySelector('#resultsBMI__output');
+const errorMessageBMI = document.querySelector('#errorMessageBMI');
 
 const calcBMI = function (e) {
   e.preventDefault();
+  errorMessageBMI.style.display = 'none';
   const weight = +weightInput.value;
   const height = +heightInput.value / 100;
-  if (!weight || !height) return console.log('Uzupełnij wszystkie pola!');
+
+  heightInput.value = '';
+  weightInput.value = '';
+
+  if (!weight || weight < 0 || weight > 1000 || !height || height > 5 || height <= 0) {
+    errorMessageBMI.style.display = 'block';
+    resultsBMI.style.display = 'none';
+    return;
+  }
 
   const result = weight / Math.pow(height, 2);
-  console.log(result.toFixed(2));
 
   let assessment = '';
 
@@ -41,7 +53,10 @@ const calcBMI = function (e) {
     console.log('wygłodzenie');
   }
 
-  console.log(`Twój wynik to: ${result.toFixed(2)}: ${assessment}`);
+  resultsBMI.style.display = 'block';
+
+  assessmentBMI.innerText = assessment;
+  resultsBMIOutput.innerText = result.toFixed(2);
 };
 
 submitBtn.addEventListener('click', calcBMI);

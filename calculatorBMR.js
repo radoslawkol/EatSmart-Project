@@ -1,7 +1,5 @@
 // calculator BMR
 
-// const { default: Big } = require('big.js');
-
 const maleInput = document.querySelector('#male');
 const femaleInput = document.querySelector('#female');
 const ageInput = document.querySelector('#age');

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EatSmart</title>
+    <title>Kalkulator BMI | EatSmart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,26 +20,179 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
-    <div class="calculatorWrapper">
-      <form class="calculatorBMI">
-        <label for="weight" class="calculatorBMI__label">Masa(kg)</label>
-        <input
-          type="number"
-          class="calculatorBMI__input"
-          id="weight"
-          required
-        />
-        <label for="height" class="calculatorBMI__label">Wzrost(cm)</label>
-        <input
-          type="number"
-          class="calculatorBMI__input"
-          id="height"
-          required
-        />
-        <input type="submit" class="calculatorBMI__submit" value="Oblicz" />
-      </form>
-    </div>
+    <!-- RESPONSIVE NAVIGATION -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <img class="nav__logo-img" src="/img/logo.svg" alt="Project's logo" />
+        <p class="nav__logo-name">EatSmart</p>
+      </div>
+      <button class="nav__icon"><span class="fas fa-bars"></span></button>
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="" class="nav__link">Strona główna</a>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">O nas</a>
+        </li>
+        <li class="nav__item nav__item--arrow">
+          <a href="" class="nav__link">Przepisy </a>
+          <button class="nav__arrow">
+            <span class="fas fa-arrow-down"></span>
+          </button>
 
+          <ul class="nav__dropdown-menu">
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Śniadania</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Obiady</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Desery</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Kolacje</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Wegetariańskie</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Kuchnie świata</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">Artykuły</a>
+        </li>
+        <li class="nav__item nav__item--arrow">
+          <a href="" class="nav__link">Kalkulatory</a>
+          <button class="nav__arrow">
+            <span class="fas fa-arrow-down"></span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">BMI</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">BMR</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- BMI PAGE -->
+    <header class="calculatorHeader">
+      <h1 class="calculatorHeading">Kalkulator BMI</h1>
+      <img
+        src="/img/calculator.svg"
+        alt="Obrazek przedstawiający kalkulator i obsługującego go mężczyznę."
+        class="calculator__img"
+      />
+    </header>
+    <main class="mainBMI">
+      <section class="aboutBMI">
+        <h3 class="aboutBMI__title">Czym jest BMI?</h3>
+        <p class="aboutBMI__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsum perspiciatis
+          aspernatur ratione incidunt minima, vitae, corrupti ipsa atque doloremque quo praesentium
+          sed similique sequi consectetur. Molestias culpa temporibus maxime exercitationem ipsum,
+          unde, officiis necessitatibus, aliquam rerum dolores illum cumque?
+        </p>
+      </section>
+      <section class="calculatorBMIWrapper">
+        <h2 class="calculatorBMIWrapper__title">Oblicz swój wskaźnik BMI:</h2>
+        <form class="calculatorBMI">
+          <div class="calculatorBMI__group">
+            <label for="weight" class="calculatorBMI__label">Waga</label>
+            <input
+              type="number"
+              class="calculatorBMI__input"
+              id="weight"
+              placeholder="Wpisz swoją wagę(kg)"
+              required
+            />
+          </div>
+          <div class="calculatorBMI__group">
+            <label for="height" class="calculatorBMI__label">Wzrost</label>
+            <input
+              type="number"
+              class="calculatorBMI__input"
+              id="height"
+              placeholder="Wpisz swój wzrost(cm)"
+              required
+            />
+          </div>
+
+          <input type="submit" class="calculatorBMI__submit" value="Oblicz" />
+        </form>
+        <p id="errorMessageBMI">Uzupełnij poprawnie wszystkie pola!</p>
+        <div class="resultsBMI">
+          <p class="resultsBMI__assessment" id="assessmentBMI">Waga prawidłowa</p>
+          <p class="resultsBMI__text">
+            Twoje BMI wynosi: <span id="resultsBMI__output">18.5</span>
+          </p>
+        </div>
+      </section>
+      <section class="infoBMI">
+        <table class="infoBMI__table">
+          <thead class="infoBMI__head">
+            <tr class="infoBMI__row">
+              <th class="infoBMI__cell infoBMI__cell--head">BMI</th>
+              <th class="infoBMI__cell infoBMI__cell--head">Interpretacja wyniku</th>
+            </tr>
+          </thead>
+          <tbody class="infoBMI__body">
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">&#60;16,0</td>
+              <td class="infoBMI__cell">wygłodzenie</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">16,0 - 16,9</td>
+              <td class="infoBMI__cell">wychudzenie</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">17,0 - 18,5</td>
+              <td class="infoBMI__cell">niedowaga</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">18,5 - 24,9</td>
+              <td class="infoBMI__cell">waga prawidłowa</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">25,0 - 29,9</td>
+              <td class="infoBMI__cell">nadwaga</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">30,0 - 34,9</td>
+              <td class="infoBMI__cell">otyłość I stopnia</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">35,0 - 39,9</td>
+              <td class="infoBMI__cell">otyłość II stopnia</td>
+            </tr>
+            <tr class="infoBMI__row">
+              <td class="infoBMI__cell">&#8805;40</td>
+              <td class="infoBMI__cell">otyłość III stopnia</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="infoBMI__hints">
+          <h3 class="infoBMI__hints-title">Pamiętaj</h3>
+          <p class="infoBMI__hints-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus amet inventore
+            beatae illo enim nesciunt, perspiciatis praesentium nisi aut dolorem aliquam nulla quas
+            nam vero iure obcaecati atque maxime quidem? Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Voluptatibus amet inventore beatae illo enim nesciunt, perspiciatis
+            praesentium nisi aut dolorem aliquam nulla quas nam vero iure obcaecati atque maxime
+            quidem?
+          </p>
+        </div>
+      </section>
+      <a href="" class="cta cta--orange">Policz też swoje BMR</a>
+    </main>
     <script src="/calculatorBMI.js"></script>
   </body>
 </html>
