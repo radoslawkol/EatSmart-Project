@@ -1,0 +1,151 @@
+// CALCULATOR BMR
+.calculatorBMRWrapper {
+  margin: 4rem 0;
+  padding: 2rem 0;
+  box-shadow: $box-shadow-grey;
+  @media screen and (min-width: 992px) {
+    padding: 4rem 6rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+}
+
+.calculatorBMR {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: end;
+  font-size: 1.4rem;
+
+  &__group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  &__label {
+    width: 80px;
+    margin-right: 1rem;
+
+    &--gender {
+      display: flex;
+      position: relative;
+      padding: 0 0.5rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+
+  &__radio {
+    display: none;
+
+    &--show {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 2px;
+      margin-right: 0.5rem;
+      border: 1px solid $font-basic-color;
+      border-radius: 50%;
+      cursor: pointer;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        background-color: $font-orange-color;
+        transform: scale(0);
+        transition: transform 0.15s;
+      }
+    }
+
+    &:checked + &--show::after {
+      transform: scale(1);
+    }
+  }
+
+  &__input {
+    width: 180px;
+    padding: 0.5rem 0.2rem;
+    border: 1px solid $font-basic-color;
+    &:focus {
+      outline: none;
+      border: 1px solid $font-orange-color;
+    }
+  }
+
+  &__select {
+    width: 180px;
+    &:focus {
+      border-color: $font-orange-color;
+    }
+  }
+
+  &__select-option {
+    &[selected] {
+      background: $font-orange-color;
+    }
+  }
+
+  &__submit {
+    align-self: center;
+  }
+}
+
+.resultsBMR {
+  display: none;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  &__metabolism {
+    margin: 2rem 0;
+    &-output {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $font-orange-color;
+    }
+  }
+  &__daily {
+    margin: 2rem 0;
+    &-output {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $font-orange-color;
+    }
+  }
+}
+
+#errorMessageBMR {
+  display: none;
+  font-size: 1.4rem;
+  text-align: center;
+  color: red;
+}
+
+.bmr__hints {
+  margin: 6rem 0;
+  padding: 2rem;
+  box-shadow: $box-shadow-grey;
+  @media screen and (min-width: 468px) {
+    margin: 6rem 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 6rem 6rem;
+    width: 70%;
+  }
+  @media screen and (min-width: 992px) {
+    margin: 6rem 12rem;
+    width: 50%;
+  }
+}

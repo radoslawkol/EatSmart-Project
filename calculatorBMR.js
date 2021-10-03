@@ -8,12 +8,29 @@ const heightInput = document.querySelector('#height');
 const selectBMR = document.querySelector('#selectBMR');
 
 const submitBtn = document.querySelector('.calculatorBMR__submit');
+const resultsBMR = document.querySelector('.resultsBMR');
+const metabolism = document.querySelector('.resultsBMR__metabolism-output');
+const dailyIntake = document.querySelector('.resultsBMR__daily-output');
+const errorMessageBMR = document.querySelector('#errorMessageBMR');
 
 submitBtn.addEventListener('click', (e) => {
   const height = parseFloat(heightInput.value);
   const weight = parseFloat(weightInput.value);
   const age = parseInt(ageInput.value);
   e.preventDefault();
+
+  heightInput.value = weightInput.value = ageInput.value = '';
+  errorMessageBMR.style.display = 'none';
+  resultsBMR.style.display = 'none';
+  const options = selectBMR.options;
+  for (o of options) {
+    o.selected = false;
+  }
+
+  if (!height || !weight || !age) {
+    errorMessageBMR.style.display = 'block';
+    return;
+  }
 
   let bmr = null;
 
@@ -24,17 +41,15 @@ submitBtn.addEventListener('click', (e) => {
     //prettier-ignore
     bmr = 655.1 +( 9.563 * weight) + (1.850 * height) - (4.676 * age);
   } else {
-    console.log('Wybierz płeć');
+    errorMessageBMR.style.display = 'block';
   }
-  console.log(height);
-  console.log(weight);
-  console.log(age);
-  console.log(Math.round(bmr * 100) / 100.0);
+
+  femaleInput.checked = false;
+  maleInput.checked = false;
 
   let activityLevelIndex = null;
 
   const activityLevel = selectBMR.value;
-  console.log(activityLevel);
   switch (+activityLevel) {
     case 0:
       activityLevelIndex = 1.2;
@@ -52,13 +67,12 @@ submitBtn.addEventListener('click', (e) => {
       activityLevelIndex = 1.9;
       break;
     default:
-      console.log('Wybierz poziom aktywności');
       break;
   }
   const result = bmr * activityLevelIndex;
-  console.log(
-    `Twoja podstawowa przemiana materii wynosi: ${bmr.toFixed(
-      0
-    )} kcal, zapotrzebowanie kaloryczne: ${result.toFixed(0)} kcal`
-  );
+
+  metabolism.innerText = `${bmr.toFixed(0)} kcal`;
+  dailyIntake.innerText = `${result.toFixed(0)} kcal`;
+
+  resultsBMR.style.display = 'block';
 });

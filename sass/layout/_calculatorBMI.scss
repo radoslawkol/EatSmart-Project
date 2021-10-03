@@ -1,35 +1,5 @@
 // CALCULATOR BMI STYLES
 
-.mainBMI {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  @media screen and (min-width: 576px) {
-    padding: 6rem;
-  }
-}
-
-.aboutBMI {
-  @media screen and (min-width: 992px) {
-    padding: 0 8rem;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 0 16rem;
-  }
-  @media screen and (min-width: 1400px) {
-    width: 70%;
-  }
-  &__title {
-    margin: 2rem 0;
-    color: $font-orange-color;
-    font-size: 1.8rem;
-  }
-  &__text {
-    font-size: 1.4rem;
-  }
-}
-
 .calculatorBMIWrapper {
   width: 32rem;
   margin: 6rem 0;
@@ -67,26 +37,6 @@
   }
   &__input {
     padding: 0.5rem;
-  }
-
-  &__submit {
-    padding: 0.8rem 2rem;
-    margin: 2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    background-color: $font-orange-color;
-    color: $font-white-color;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-
-    &:hover {
-      transform: scale(0.95);
-      box-shadow: $box-shadow-grey;
-    }
-    &:focus {
-      transform: scale(1);
-    }
   }
 }
 
@@ -153,27 +103,6 @@
     &--head {
       padding: 2rem;
       color: $font-orange-color;
-    }
-  }
-
-  &__hints {
-    margin-top: 6rem;
-    padding: 2rem;
-    box-shadow: $box-shadow-grey;
-    @media screen and (min-width: 992px) {
-      margin: 0 2rem;
-      width: 40%;
-    }
-
-    &-text {
-      font-size: 1.4rem;
-      line-height: 2rem;
-    }
-    &-title {
-      margin: 1rem 0 2rem;
-      text-align: center;
-      color: $font-orange-color;
-      text-transform: uppercase;
     }
   }
 }
