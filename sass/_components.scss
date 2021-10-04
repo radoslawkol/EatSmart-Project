@@ -1,3 +1,27 @@
+// BUTTONS
+.btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid $font-orange-color;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  &--white {
+  }
+  &__link {
+    font-size: 1.4rem;
+    color: $font-basic-color;
+    text-decoration: none;
+  }
+  &:hover {
+    background: $font-orange-color;
+    box-shadow: $box-shadow-grey;
+  }
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
 .calculatorHeader {
   display: flex;
   align-items: center;
