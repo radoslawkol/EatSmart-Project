@@ -5,7 +5,7 @@ const navMenu = document.querySelector('.nav__menu');
 
 navItem.forEach((item) =>
   item.addEventListener('click', function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     let clicked = e.target.closest('.nav__item--arrow');
     clicked.classList.toggle('show');
 

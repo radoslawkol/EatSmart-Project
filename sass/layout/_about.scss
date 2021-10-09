@@ -4,17 +4,33 @@
   padding: 2rem;
   width: 100%;
   height: 100vh;
+  @include small {
+    padding: 4rem;
+  }
+  @include large {
+    padding: 8rem;
+  }
   &__text {
     font-size: 1.4rem;
     margin-bottom: 2rem;
+    line-height: 2.5rem;
+    @include small {
+      width: 80%;
+    }
+    @include large {
+      width: 50%;
+    }
   }
 
   &__content {
   }
 
   &__images {
-    margin-top: 4rem;
     position: relative;
+    margin-top: 4rem;
+    @include medium {
+      top: -10rem;
+    }
   }
 
   &__img {
@@ -26,6 +42,18 @@
     border-radius: 50%;
     object-position: center;
     transition: box-shadow 0.3s, transform 0.3s;
+    @include small {
+      width: 18rem;
+      height: 18rem;
+    }
+    @include large {
+      width: 23rem;
+      height: 23rem;
+    }
+    @include x-x-large {
+      width: 18rem;
+      height: 18rem;
+    }
     &:hover {
       box-shadow: $box-shadow-grey;
       transform: scale(1.05);
@@ -34,14 +62,30 @@
     &--1 {
       top: 0;
       left: 50%;
+      @include large {
+        top: -10rem;
+      }
+      @include extra-large {
+        top: -20rem;
+        left: 60%;
+      }
     }
+
     &--2 {
       top: 4rem;
       left: 20%;
+      @include extra-large {
+        top: 0;
+        left: 40%;
+      }
     }
     &--3 {
       top: 12rem;
       left: 50%;
+      @include extra-large {
+        top: 6rem;
+        left: 70%;
+      }
     }
   }
 
@@ -55,6 +99,13 @@
     font-size: 2.2rem;
     cursor: pointer;
     transition: color 0.3s, transform 0.3s;
+    animation: aboutArrowMove 0.5s infinite;
+    @include large {
+      bottom: 5rem;
+    }
+    @include x-x-large {
+      bottom: 2rem;
+    }
 
     &:hover {
       color: $font-orange-color;
@@ -64,13 +115,35 @@
 }
 
 .aboutDiet {
+  padding-top: 6rem;
   &__content {
     display: grid;
     padding: 2rem;
+    @include extra-large {
+      grid-template-columns: 1fr 1fr;
+      padding: 6rem;
+    }
   }
   &__img {
     width: 100%;
     padding: 4rem;
+    justify-self: center;
+
+    &--2 {
+      @include extra-large {
+        grid-column: 2/3;
+      }
+    }
+    @include small {
+      width: 70%;
+    }
+
+    @include large {
+      width: 50%;
+    }
+    @include extra-large {
+      width: 80%;
+    }
   }
 
   &__text {
@@ -79,6 +152,16 @@
     justify-content: center;
     margin-bottom: 6rem;
     font-size: 1.6rem;
+    &--2 {
+      @include extra-large {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
+    @include extra-large {
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -91,6 +174,16 @@
     background-size: cover;
     padding: 4rem 2rem;
     clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+    @include small {
+      padding: 4rem;
+    }
+    @include large {
+      padding: 10rem;
+    }
+    @include extra-large {
+      display: flex;
+      background: url('./../../img/aboutInfo-background-large.jpg');
+    }
   }
 
   &__piece {
@@ -100,6 +193,9 @@
     background-color: $primary-color;
     box-shadow: $box-shadow-grey;
     z-index: 1;
+    @include extra-large {
+      width: 60%;
+    }
     &-title {
       margin-bottom: 2rem;
       font-size: 1.8rem;
@@ -124,6 +220,15 @@
 .faq {
   margin: 2rem 2rem 10rem;
   padding: 2rem;
+  @include small {
+    padding: 4rem 8rem;
+  }
+  @include large {
+    padding: 4rem 16rem;
+  }
+  @include extra-large {
+    padding: 4rem 26rem;
+  }
   &__accordion {
     display: flex;
     justify-content: space-between;
@@ -162,11 +267,20 @@
     transition: all 0.3s;
   }
 
-  &__panel.active {
-  }
-
   &__answer {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+}
+
+.aboutPartenrs {
+  &__container {
+    display: block;
+    height: 20rem;
+    margin: 2rem;
+    box-shadow: $box-shadow-grey;
+    @include large {
+      margin: 6rem;
+    }
   }
 }

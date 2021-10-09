@@ -6,8 +6,6 @@
   background: transparent;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
-  &--white {
-  }
   &__link {
     font-size: 1.4rem;
     color: $font-basic-color;
@@ -19,6 +17,21 @@
   }
   &:focus {
     transform: scale(1.05);
+  }
+  &--white {
+    color: $font-white-color;
+    border: 2px solid $font-white-color;
+    .btn__link {
+      color: $font-white-color;
+      transition: color 0.3s;
+    }
+    &:hover {
+      background: $font-white-color;
+      box-shadow: $box-shadow-grey;
+    }
+    &:hover .btn__link {
+      color: $font-basic-color;
+    }
   }
 }
 
@@ -143,5 +156,36 @@
       color: $font-orange-color;
       text-transform: uppercase;
     }
+  }
+}
+
+// GOUPBTN
+.goUpBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: $font-basic-color;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: rgba($secondary-color, 0.6);
+  }
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: $font-white-color;
+  }
+  &__icon {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

@@ -1,9 +1,12 @@
 @import 'reset';
 @import 'variables';
+@import 'mixins';
 @import 'base';
 @import 'typography';
 @import 'components';
+@import 'animations';
 @import 'navigation';
 @import 'layout/calculatorBMI';
 @import 'layout/calculatorBMR';
 @import 'layout/about';
+@import 'layout/footer';

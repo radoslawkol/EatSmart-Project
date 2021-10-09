@@ -1,6 +1,9 @@
 const faqIcon = document.querySelectorAll('.faq__icon');
 const accordions = document.querySelectorAll('.faq__accordion');
 
+const aboutHeaderArrowDown = document.querySelector('#aboutHeaderArrowDown');
+const aboutDiet = document.querySelector('#aboutDiet');
+
 accordions.forEach((a) =>
   a.addEventListener('click', function (e) {
     this.classList.toggle('active');
@@ -15,3 +18,7 @@ accordions.forEach((a) =>
     }
   })
 );
+
+aboutHeaderArrowDown.addEventListener('click', () => {
+  aboutDiet.scrollIntoView();
+});

@@ -71,7 +71,7 @@
           </button>
           <ul class="nav__dropdown-menu">
             <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">BMI</a>
+              <a href="/templates/calculatorBMI.html" class="nav__link">BMI</a>
             </li>
             <li class="nav__item nav__item--drop">
               <a href="" class="nav__link">BMR</a>
@@ -92,7 +92,9 @@
           ipsa at laboriosam voluptatum vitae voluptatibus iste perferendis dignissimos. Debitis
           vero cupiditate minus quidem mollitia repudiandae maiores!
         </p>
-        <button class="btn btn--white"><a href="" class="btn__link">Cztaj więcej</a></button>
+        <button class="btn btn">
+          <a href="#aboutUs" class="btn__link">Cztaj więcej</a>
+        </button>
       </div>
       <div class="aboutHeader__images">
         <img
@@ -116,7 +118,7 @@
       </button>
     </header>
     <main class="aboutMain">
-      <section class="aboutDiet">
+      <section class="aboutDiet" id="aboutDiet">
         <h2 class="aboutDiet__title aboutTitle">Zdrowa dieta zapewnia:</h2>
         <div class="aboutDiet__content">
           <img
@@ -201,7 +203,66 @@
           </div>
         </div>
       </section>
+      <section class="aboutPartners">
+        <h2 class="aboutPartners__title aboutTitle">Nasi partnerzy</h2>
+        <div class="aboutPartenrs__container"></div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__about">
+          <div class="footer__logo">
+            <img class="nav__logo-img" src="" alt="Project's logo" />
+          </div>
+          <div class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perferendis quos aliquam
+            illum cumque veritatis tempore illo dolor, atque rem at sunt quidem eum. Inventore
+            molestias sapiente repellat deleniti numquam?
+          </div>
+          <button class="btn btn--white">
+            <a href="#aboutUs" class="btn__link">Poznaj nas</a>
+          </button>
+          <div class="footer__social">
+            <a href="" class="footer__social-icon"><span class="fab fa-facebook"></span></a>
+            <a href="" class="footer__social-icon"><span class="fab fa-instagram-square"></span></a>
+          </div>
+        </div>
+        <div class="footer__seeMore">
+          <h3 class="footer__title">Zobacz też</h3>
+          <ul class="footer__links">
+            <a href="" class="footer__link">Najlepsze przepisy</a>
+            <a href="" class="footer__link">Artykuły o zdrowym odżywianiu</a>
+            <a href="" class="footer__link">Kuchnie świata</a
+            ><a href="" class="footer__link">Oblicz swoje BMI</a
+            ><a href="" class="footer__link">Kalkulator BMR</a>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h3 class="footer__title">Kontakt</h3>
+          <p class="footer__mail"><span class="fas fa-envelope"></span> mail@gmail.com</p>
+          <button class="btn btn--white">
+            <a href="" class="btn__link">Napisz do nas</a>
+          </button>
+          <div class="footer__policy">
+            <a href="" class="footer__cookies"
+              ><span class="fas fa-cookie-bite"></span>Pliki cookies</a
+            >
+            <a href="" class="footer__privatePolicy">
+              <span class="fas fa-lock"></span>Polityka prywatności
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__copyrights">
+      <p class="footer__copy">
+        Copyrights &copy;EatSmart <span id="year">2021</span> | All rights reserved
+      </p>
+      <p class="footer__make">Designed by Aleksandra Kołoczek, created by Radosław Kołoczek</p>
+    </div>
+    <button class="goUpBtn">
+      <a href="#" class="goUpBtn__link"><span class="fas fa-chevron-up goUpBtn__icon"></span></a>
+    </button>
     <script src="/navigation.js"></script>
     <script src="/about.js"></script>
   </body>

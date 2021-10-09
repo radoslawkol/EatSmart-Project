@@ -1,8 +1,14 @@
 html {
   font-size: 62.5%; //10px
   scroll-behavior: smooth;
+  @media screen and (min-width: 768px) {
+    font-size: 68.75%;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 75%;
+  }
   @media screen and (min-width: 1400px) {
-    font-size: 68.5%;
+    font-size: 87.5%;
   }
 }
 

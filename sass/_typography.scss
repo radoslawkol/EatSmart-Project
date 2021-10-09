@@ -10,6 +10,10 @@
   font-size: 2rem;
   padding: 1rem;
   color: $font-orange-color;
+
+  @include extra-large {
+    font-size: 3rem;
+  }
 }
 
 .aboutTitle {
@@ -18,4 +22,8 @@
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
+
+  @include extra-large {
+    font-size: 2.5rem;
+  }
 }

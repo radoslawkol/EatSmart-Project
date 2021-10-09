@@ -1,0 +1,14 @@
+// ANIMATIONS
+
+@keyframes aboutArrowMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+    filter: drop-shadow(0rem 1rem 1rem rgba(0, 0, 0, 0.5));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
