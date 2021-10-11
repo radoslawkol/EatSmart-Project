@@ -1,0 +1,93 @@
+// DISH PAGE STYLES
+
+.headerDish {
+  padding: 4rem;
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+  }
+  &__params {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+  &__time {
+    &-icon {
+      color: $font-orange-color;
+    }
+  }
+  &__difficulty {
+  }
+}
+
+.mainDish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__ingredients {
+    padding: 4rem;
+    box-shadow: $box-shadow-grey;
+  }
+  &__heading {
+    margin: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.ingredientsTable {
+  font-size: 1.4rem;
+  &__row {
+    padding: 1rem;
+  }
+
+  &__cell {
+    padding: 1rem;
+  }
+}
+
+.nutrition {
+  margin-top: 4rem;
+  padding: 4rem;
+  text-align: center;
+  box-shadow: $box-shadow-grey;
+  &__kcal {
+    color: $font-orange-color;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  &__params {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+.preparation {
+  margin: 4rem;
+  padding: 4rem;
+  box-shadow: $box-shadow-grey;
+  &__text {
+    // padding: 2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  &__strong {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    color: $font-orange-color;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+}

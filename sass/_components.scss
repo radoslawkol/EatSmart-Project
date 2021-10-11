@@ -189,3 +189,41 @@
     transform: translateX(-50%);
   }
 }
+
+// FAVOURITE BTN
+.favouriteBtn {
+  background: transparent;
+  border: none;
+  &__icon {
+    color: $font-orange-color;
+    font-size: 2rem;
+    transition: color 0.3s;
+    &:hover {
+      color: $font-orange-color-hover;
+    }
+  }
+}
+
+// SLICK SLIDER
+.sliderSection {
+}
+.slick {
+  width: 300px;
+}
+
+.slide {
+  &__img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    padding: 2rem;
+  }
+  &__dishName {
+    text-align: center;
+  }
+}
+
+.slick-next::before,
+.slick-prev::before {
+  color: black !important;
+}
