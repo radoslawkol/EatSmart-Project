@@ -1,0 +1,31 @@
+// HOME PAGE STYLES
+
+.headerHomePage {
+  padding: 2rem;
+
+  &__slick {
+    margin: 0 auto;
+    width: 90% !important;
+    .slick-dots {
+      display: none !important;
+    }
+  }
+
+  &__introduction {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.6rem;
+  }
+  &__header-link {
+    text-decoration: none;
+    color: $font-orange-color;
+  }
+}
+.mainHomePage {
+  &__latestdishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+}

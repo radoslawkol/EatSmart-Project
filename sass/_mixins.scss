@@ -1,11 +1,17 @@
 // MEDIA QUERIES
 
+$x-small-width: 478px;
 $small-width: 576px;
 $medium-width: 768px;
 $large-width: 992px;
 $extra-large-width: 1200px;
 $extra-extra-width: 1400px;
 
+@mixin x-small {
+  @media (min-width: $x-small-width) {
+    @content;
+  }
+}
 @mixin small {
   @media (min-width: $small-width) {
     @content;

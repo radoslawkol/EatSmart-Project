@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EatSmart | Strona główna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+  </head>
+  <body>
+    <!-- RESPONSIVE NAVIGATION -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <img class="nav__logo-img" src="/img/logo.svg" alt="Project's logo" />
+        <p class="nav__logo-name">EatSmart</p>
+      </div>
+      <button class="nav__icon"><span class="fas fa-bars"></span></button>
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="" class="nav__link">Strona główna</a>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">O nas</a>
+        </li>
+        <li class="nav__item nav__item--arrow">
+          <a href="" class="nav__link">Przepisy </a>
+          <button class="nav__arrow">
+            <span class="fas fa-arrow-down"></span>
+          </button>
+
+          <ul class="nav__dropdown-menu">
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Śniadania</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Obiady</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Desery</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Kolacje</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Wegetariańskie</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Kuchnie świata</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">Artykuły</a>
+        </li>
+        <li class="nav__item nav__item--arrow">
+          <a href="" class="nav__link">Kalkulatory</a>
+          <button class="nav__arrow">
+            <span class="fas fa-arrow-down"></span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li class="nav__item nav__item--drop">
+              <a href="/templates/calculatorBMI.html" class="nav__link">BMI</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">BMR</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- PAGE -->
+    <header class="sliderSection headerHomePage" style="max-width: 100%; box-sizing: border-box">
+      <div class="slick headerHomePage__slick" style="width: 200px">
+        <div class="slide headerHomePage__slide">
+          <img src="/img/about-plate-1.jpg" alt="Proponowane danie" class="slide__img" />
+        </div>
+        <div class="slide headerHomePage__slide">
+          <img src="/img/about-plate-2.jpg" alt="Proponowane danie" class="slide__img" />
+        </div>
+        <div class="slide headerHomePage__slide">
+          <img src="/img/about-plate-3.jpg" alt="Proponowane danie" class="slide__img" />
+        </div>
+        <div class="slide headerHomePage__slide">
+          <img src="/img/about-plate-1.jpg" alt="Proponowane danie" class="slide__img" />
+        </div>
+        <div class="slide headerHomePage__slide">
+          <img src="/img/about-plate-2.jpg" alt="Proponowane danie" class="slide__img" />
+        </div>
+      </div>
+      <h1 class="headerHomePage__"></h1>
+      <p class="headerHomePage__introduction">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quasi maxime iure at veniam
+        ut harum inventore possimus, dolorem aspernatur?
+        <a href="/templates/about.html" class="headerHomePage__header-link">Dowiedz się więcej</a>
+      </p>
+    </header>
+    <main class="mainHomePage">
+      <section class="mainHomePage__latestdishes">
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+        <div class="dishCard mainHomePage__dishCard">
+          <img
+            src="/img/about-plate-1.jpg"
+            alt=""
+            class="dishCard__img mainHomePage__dishCard-img"
+          />
+          <button class="favouriteBtn">
+            <span class="fas fa-heart favouriteBtn__icon"></span>
+          </button>
+          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
+        </div>
+      </section>
+    </main>
+
+    <script src="/navigation.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+    <script src="/slickInitialization.js"></script>
+  </body>
+</html>
