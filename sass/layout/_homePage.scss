@@ -2,12 +2,25 @@
 
 .headerHomePage {
   padding: 2rem;
+  @include small {
+    padding: 4rem;
+  }
+  @include large {
+    padding: 0 4rem;
+  }
 
   &__slick {
     margin: 0 auto;
     width: 90% !important;
+
     .slick-dots {
       display: none !important;
+    }
+
+    .slide__img {
+      @include large {
+        height: 30rem !important;
+      }
     }
   }
 
@@ -15,6 +28,17 @@
     font-size: 1.6rem;
     text-align: center;
     line-height: 2.6rem;
+    @include small {
+      padding: 4rem;
+    }
+    @include large {
+      width: 70%;
+      margin: 0 auto;
+      line-height: 3rem;
+    }
+    @include x-x-large {
+      width: 55%;
+    }
   }
   &__header-link {
     text-decoration: none;
@@ -22,10 +46,80 @@
   }
 }
 .mainHomePage {
+  @include large {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    margin: 0 4rem;
+  }
+  @include x-x-large {
+    margin: 0 12rem;
+  }
   &__latestdishes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 6rem 2rem;
     padding: 2rem;
+    @include small {
+      padding: 4rem;
+    }
+    @include large {
+      padding-left: 0;
+    }
+  }
+  &__btn {
+    margin: 4rem;
+    grid-column: span 2;
+    @include small {
+      width: 25rem;
+      justify-self: center;
+    }
+  }
+  &__articles {
+    margin: 6rem 0 10rem;
+    @include large {
+      box-shadow: $box-shadow-grey;
+      align-self: flex-start;
+      padding: 4rem;
+      margin: 4rem 0;
+    }
+  }
+  &__title {
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    padding: 1rem 0;
+  }
+  &__link {
+    font-size: 1.6rem;
+    color: $font-basic-color;
+    text-decoration: none;
+  }
+
+  &__illustration {
+    width: 70%;
+    margin: 10rem 4rem;
+  }
+
+  &__slick {
+    margin: 0 auto;
+    width: 80% !important;
+    @include large {
+      display: none !important;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+
+  &__aboutPartners {
+    @include large {
+      grid-column: span 2;
+    }
   }
 }

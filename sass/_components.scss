@@ -194,6 +194,7 @@
 .favouriteBtn {
   background: transparent;
   border: none;
+  cursor: pointer;
   &__icon {
     color: $font-orange-color;
     font-size: 2rem;
@@ -254,6 +255,10 @@
   position: relative;
   &__img {
     width: 100%;
+    object-fit: cover;
+    @include x-x-large {
+      height: 20rem;
+    }
   }
   &__title {
     padding: 1rem 0;
