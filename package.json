@@ -4,13 +4,14 @@
   "description": "This is a website about healthy nutrition, it's consists of various recipes",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon server.js",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "'./node_modules/.bin/eslint' . --fix"
   },
   "author": "Radosław Kołoczek",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^6.0.7"

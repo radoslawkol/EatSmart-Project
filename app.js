@@ -15,9 +15,7 @@ const exp = require('constants');
 // app.use('/categories', categories);
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join());
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'homePage.html'));
 });
 
-app.listen(4000, () => {
-  console.log('Server works');
-});
+module.exports = app;
