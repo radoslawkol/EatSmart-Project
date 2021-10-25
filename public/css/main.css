@@ -1551,7 +1551,7 @@ body {
   margin-top: 10rem;
   padding: 4rem;
   background: linear-gradient(125deg, #fc9f0aa2 100%, #fc9f0a75 87%),
-    url('./../../img/footer-background-small.jpg') no-repeat;
+    url('./../../public/img/footer-background-small.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }

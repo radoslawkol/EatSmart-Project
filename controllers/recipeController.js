@@ -20,13 +20,37 @@ exports.createRecipe = async (req, res, next) => {
 
 exports.getAllRecipes = async (req, res, next) => {
   try {
-    const allRecipes = await Recipe.find();
+    const queryObj = { ...req.query };
+    const excludedFields = ['page', 'sort', 'limit'];
+    excludedFields.forEach((el) => delete queryObj[el]);
+
+    let queryStr = JSON.stringify(queryObj);
+
+    let query = Recipe.find(JSON.parse(queryStr));
+
+    if (req.query.fields) {
+      const fields = req.query.fields.split(',').join(' ');
+      query = query.select(fields);
+    } else {
+      query = query.select('-__v');
+    }
+
+    if (req.query.sort) {
+      query = query.sort(req.query.sort);
+    }
+
+    if (req.query.page) {
+      const limit = +req.query.limit;
+      query = query.skip(req.query.page * limit).limit(limit);
+    }
+
+    const recipes = await query;
 
     res.status(200).json({
       status: 'success',
-      results: allRecipes.length,
+      results: recipes.length,
       data: {
-        allRecipes,
+        recipes,
       },
     });
   } catch (err) {

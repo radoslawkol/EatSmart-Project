@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server.js",
     "lint": "./node_modules/.bin/eslint .",
-    "lint:fix": "'./node_modules/.bin/eslint' . --fix"
+    "lint:fix": "'./node_modules/.bin/eslint' . --fix",
+    "debug": "ndb server.js"
   },
   "author": "Radosław Kołoczek",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
+    "ndb": "^1.1.5",
     "nodemon": "^2.0.12"
   }
 }
