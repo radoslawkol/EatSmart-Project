@@ -3,6 +3,7 @@
 const searchBtn = document.querySelector('.searchBar__btn');
 const searchInput = document.querySelector('.headerRecipies__input');
 const recipesContainer = document.querySelector('.mainRecipies__container');
+let searchCharacters = [];
 
 const resultsPerPage = 12;
 
@@ -25,6 +26,26 @@ const renderRecipes = function (img, name, id) {
   recipesContainer.insertAdjacentHTML('afterbegin', html);
 };
 
+const partialSearch = async function (recipeName) {
+  try {
+    recipeName = recipeName.toLowerCase();
+    const response = await fetch(`http://127.0.0.1:4000/api/v1/recipes?fields=image,name,_id`);
+    const { data } = await response.json();
+    searchCharacters = data.recipes;
+    const filteredCharacters = searchCharacters.filter((character) => {
+      return character.name.toLowerCase().includes(recipeName);
+    });
+    filteredCharacters.forEach((recipe) => {
+      renderRecipes(recipe.image, recipe.name, recipe._id);
+    });
+
+    document.querySelector('.paginationBox__list').innerHTML = '';
+    document.querySelector('#backToAllRecipesBtn').style.display = 'block';
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const searchRecipes = async function () {
   try {
     let recipeName = searchInput.value;
@@ -32,20 +53,11 @@ const searchRecipes = async function () {
     if (!recipeName) return;
     recipesContainer.textContent = '';
 
-    recipeName = recipeName[0].toUpperCase() + recipeName.slice(1);
-
-    const res = await fetch(
-      `http://127.0.0.1:4000/api/v1/recipes?name=${recipeName}&fields=image,name,_id`
-    );
-    const { data } = await res.json();
-
-    const recipe = data.recipes[0];
-
-    renderRecipes(recipe.image, recipe.name, recipe._id);
+    partialSearch(recipeName);
 
     searchInput.value = '';
   } catch (err) {
-    console.log(err.message);
+    console.error(err.message);
   }
 };
 
@@ -80,7 +92,6 @@ const renderPaginationBox = async function () {
     const res = await fetch(`http://127.0.0.1:4000/api/v1/recipes?fields=results`);
     const data = await res.json();
     const results = data.results;
-    console.log(results);
     const pages = Math.ceil(results / resultsPerPage);
 
     let html = '';
@@ -108,7 +119,6 @@ const renderPaginationBox = async function () {
     ><span class="fas fa-chevron-circle-right"></span
     ></a>
     </li>`;
-    console.log('wchodzi');
 
     document.querySelector('.paginationBox__list').insertAdjacentHTML('afterbegin', content);
 

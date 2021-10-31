@@ -1,12 +1,16 @@
 // BUTTONS
 .btn {
-  padding: 0.5rem 1rem;
+  // padding: 0.5rem 1rem;
   border: 2px solid $font-orange-color;
   border-radius: 5px;
   background: transparent;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
   &__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0.5rem 1rem;
     font-size: 1.4rem;
     color: $font-basic-color;
     text-decoration: none;
@@ -32,6 +36,10 @@
     &:hover .btn__link {
       color: $font-basic-color;
     }
+  }
+  &__backToAllRecipes {
+    display: none;
+    margin: 2rem auto;
   }
 }
 
