@@ -19,7 +19,7 @@ const renderRecipes = function (img, name, id) {
             <span class="fas fa-heart favouriteBtn__icon"></span>
           </button>
           <h3 class="dishCard__title mainRecipies__dishCard-title">${name}</h3>
-          <button class="btn btn--orange"><a href="${id}" class="btn__link">Sprawdź</a></button>
+          <button class="btn btn--orange"><a href="/recipes/${id}" class="btn__link">Sprawdź</a></button>
         </div>
     `;
 

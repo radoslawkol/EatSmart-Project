@@ -19,6 +19,10 @@ app.get('/recipes', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'recipesPage.html'));
 });
 
+app.get('/recipes/:id', (req, res) => {
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'dishPage.html'));
+});
+
 app.use('/api/v1/recipes', recipeRouter);
 
 module.exports = app;
