@@ -1,3 +1,4 @@
+const AppError = require('./../utlis/appError');
 const Recipe = require('./../models/recipeModel');
 
 exports.createRecipe = async (req, res, next) => {
@@ -67,6 +68,9 @@ exports.getRecipe = async (req, res, next) => {
 
     const recipe = await Recipe.findById(id);
 
+    if (!recipe) {
+      return next(new AppError('No recipe found with that ID!', 404));
+    }
     res.status(200).json({
       status: 'success',
       data: {
