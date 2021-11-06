@@ -2,13 +2,14 @@
 
 .headerDish {
   padding: 4rem;
-  @include extra-large {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+
   @include small {
     padding: 6rem;
     text-align: center;
+  }
+  @include extra-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   @include x-x-large {
     padding: 6rem 10rem;
@@ -17,8 +18,10 @@
   &__img {
     width: 100%;
     border-radius: 10px;
+    object-fit: cover;
     @include small {
       width: 80%;
+      height: 40rem;
     }
     @include large {
       width: 60%;

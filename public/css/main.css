@@ -431,6 +431,7 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }
 
 @media (min-width: 1400px) {
@@ -578,6 +579,16 @@ body {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   background-color: #e1a126;
+}
+
+#errorRecipeNotFound {
+  padding: 4rem;
+  width: 100%;
+  font-size: 2.4rem;
+  grid-column: span 4;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 @-webkit-keyframes aboutArrowMove {
@@ -1729,19 +1740,19 @@ body {
   padding: 4rem;
 }
 
+@media (min-width: 576px) {
+  .headerDish {
+    padding: 6rem;
+    text-align: center;
+  }
+}
+
 @media (min-width: 1200px) {
   .headerDish {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 576px) {
-  .headerDish {
-    padding: 6rem;
-    text-align: center;
   }
 }
 
@@ -1754,11 +1765,14 @@ body {
 .headerDish__img {
   width: 100%;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 576px) {
   .headerDish__img {
     width: 80%;
+    height: 40rem;
   }
 }
 

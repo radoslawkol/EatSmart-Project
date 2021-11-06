@@ -21,6 +21,7 @@ const fetchData = async function () {
     console.log(data);
 
     // Put data to the HTML
+    document.title = `${recipe.name} | EatSmart`;
     dishTitle.textContent = recipe.name;
     dishImg.setAttribute('src', `${recipe.image}`);
     dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;

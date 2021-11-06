@@ -56,7 +56,7 @@ const getLatestDishes = async function () {
 
     data.recipes.forEach((recipe) => {
       const cardHtml = `
-     <div class="dishCard mainHomePage__dishCard">
+     <div class="dishCard mainHomePage__dishCard" data-id="${recipe._id}">
             <img
               src="${recipe.image}"
               alt="${recipe.name}"
@@ -67,21 +67,21 @@ const getLatestDishes = async function () {
               <span class="fas fa-heart favouriteBtn__icon"></span>
             </button>
             <h3 class="dishCard__title mainHomePage__dishCard-title">${recipe.name}</h3>
-            <button class="btn btn--orange"><a href="${recipe._id}" class="btn__link">Sprawdź</a></button>
+            <button class="btn btn--orange"><a href="recipes/${recipe._id}" class="btn__link">Sprawdź</a></button>
           </div>
     `;
       mainHomePageLatestdishes.innerHTML += cardHtml;
-      // mainHomePageLatestdishes.insertAdjacentHTML('afterbegin', cardHtml);
     });
   } catch (err) {
     console.log(err.message);
   }
 
   mainHomePageLatestdishes.innerHTML += ` <button class="btn btn--orange mainHomePage__btn">
-          <a class="btn__link" href="">Sprawdź więcej przepisów</a>
+          <a class="btn__link" href="/recipes">Sprawdź więcej przepisów</a>
         </button>`;
 };
 getLatestDishes();
+listenToEvent();
 
 // CAROUSEL
 const getCarousel = async function () {
@@ -106,3 +106,16 @@ const getCarousel = async function () {
 };
 
 getCarousel();
+
+function listenToEvent() {
+  mainHomePageLatestdishes.addEventListener('click', function (e) {
+    console.log(e.target);
+    const card = e.target.closest('.mainHomePage__dishCard');
+    if (card) {
+      console.log(card.dataset.id);
+      window.location.pathname = `recipes/${card.dataset.id}`;
+    } else {
+      return;
+    }
+  });
+}

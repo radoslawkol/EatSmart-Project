@@ -9,7 +9,7 @@ const resultsPerPage = 12;
 
 const renderRecipes = function (img, name, id) {
   const html = `
-  <div class="dishCard mainRecipies__dishCard">
+  <div class="dishCard mainRecipies__dishCard" data-id="${id}">
           <img
             src="${img}"
             alt="${name}"
@@ -35,6 +35,15 @@ const partialSearch = async function (recipeName) {
     const filteredCharacters = searchCharacters.filter((character) => {
       return character.name.toLowerCase().includes(recipeName);
     });
+    if (filteredCharacters.length === 0) {
+      console.log('not found');
+      recipesContainer.innerHTML = `
+      <p id="errorRecipeNotFound">Nie znaleziono przepisu o takiej nazwie!</p>`;
+      document.querySelector('.paginationBox__list').innerHTML = '';
+      document.querySelector('#backToAllRecipesBtn').style.display = 'block';
+      return;
+    }
+
     filteredCharacters.forEach((recipe) => {
       renderRecipes(recipe.image, recipe.name, recipe._id);
     });
@@ -80,8 +89,19 @@ const fetchRecipes = async function (page = '0') {
     data.recipes.forEach((recipe) => {
       renderRecipes(recipe.image, recipe.name, recipe._id);
     });
+    recipesContainer.addEventListener('click', function (e) {
+      console.log(e.target);
+      const card = e.target.closest('.mainRecipies__dishCard');
+      console.log(card);
+      if (card) {
+        console.log(card.dataset.id);
+        window.location.pathname = `recipes/${card.dataset.id}`;
+      } else {
+        return;
+      }
+    });
   } catch (err) {
-    console.log(err.message);
+    console.error(err);
   }
 };
 
