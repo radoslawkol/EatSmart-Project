@@ -24,6 +24,18 @@ app.get('/recipes/:id', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'dishPage.html'));
 });
 
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'about.html'));
+});
+
+app.get('/calculatorBMI', (req, res) => {
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'calculatorBMI.html'));
+});
+
+app.get('/calculatorBMR', (req, res) => {
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'calculatorBMR.html'));
+});
+
 app.use('/api/v1/recipes', recipeRouter);
 
 app.all('*', (req, res, next) => {

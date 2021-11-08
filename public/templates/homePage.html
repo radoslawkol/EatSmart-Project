@@ -39,13 +39,13 @@
       <button class="nav__icon"><span class="fas fa-bars"></span></button>
       <ul class="nav__menu">
         <li class="nav__item">
-          <a href="" class="nav__link">Strona główna</a>
+          <a href="/" class="nav__link">Strona główna</a>
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link">O nas</a>
+          <a href="/about" class="nav__link">O nas</a>
         </li>
         <li class="nav__item nav__item--arrow">
-          <a href="" class="nav__link">Przepisy </a>
+          <a href="/recipes" class="nav__link">Przepisy </a>
           <button class="nav__arrow">
             <span class="fas fa-arrow-down"></span>
           </button>
@@ -72,24 +72,24 @@
           </ul>
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link">Artykuły</a>
+          <a href="/articles" class="nav__link">Artykuły</a>
         </li>
         <li class="nav__item nav__item--arrow">
-          <a href="" class="nav__link">Kalkulatory</a>
+          <a href="/" class="nav__link">Kalkulatory</a>
           <button class="nav__arrow">
             <span class="fas fa-arrow-down"></span>
           </button>
           <ul class="nav__dropdown-menu">
             <li class="nav__item nav__item--drop">
-              <a href="/public/templates/calculatorBMI.html" class="nav__link">BMI</a>
+              <a href="/calculatorBMI" class="nav__link">BMI</a>
             </li>
             <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">BMR</a>
+              <a href="calculatorBMR" class="nav__link">BMR</a>
             </li>
           </ul>
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link">Kontakt</a>
+          <a href="/contact" class="nav__link">Kontakt</a>
         </li>
       </ul>
     </nav>
@@ -310,7 +310,7 @@
             molestias sapiente repellat deleniti numquam?
           </div>
           <button class="btn btn--white">
-            <a href="#aboutUs" class="btn__link">Poznaj nas</a>
+            <a href="/about" class="btn__link">Poznaj nas</a>
           </button>
           <div class="footer__social">
             <a href="" class="footer__social-icon"><span class="fab fa-facebook"></span></a>
@@ -320,11 +320,11 @@
         <div class="footer__seeMore">
           <h3 class="footer__title">Zobacz też</h3>
           <ul class="footer__links">
-            <a href="" class="footer__link">Najlepsze przepisy</a>
-            <a href="" class="footer__link">Artykuły o zdrowym odżywianiu</a>
+            <a href="/recipes" class="footer__link">Najlepsze przepisy</a>
+            <a href="/articles" class="footer__link">Artykuły o zdrowym odżywianiu</a>
             <a href="" class="footer__link">Kuchnie świata</a
-            ><a href="" class="footer__link">Oblicz swoje BMI</a
-            ><a href="" class="footer__link">Kalkulator BMR</a>
+            ><a href="/calculatorBMI" class="footer__link">Oblicz swoje BMI</a
+            ><a href="/calculatorBMR" class="footer__link">Kalkulator BMR</a>
           </ul>
         </div>
         <div class="footer__contact">
@@ -367,5 +367,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     ></script>
     <script src="/public/js/slickInitialization.js"></script>
+    <script src="/public/js/upBtn.js"></script>
   </body>
 </html>

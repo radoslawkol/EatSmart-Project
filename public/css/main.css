@@ -310,6 +310,7 @@ body {
 }
 
 .goUpBtn {
+  display: none;
   position: fixed;
   bottom: 2rem;
   right: 1rem;
@@ -626,7 +627,9 @@ body {
 }
 
 .nav {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,6 +642,7 @@ body {
           align-items: center;
   font-size: 1.6rem;
   background-color: #fff;
+  z-index: 100;
 }
 
 @media screen and (max-width: 840px) {
@@ -773,8 +777,8 @@ body {
 
 .nav__arrow {
   display: none;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
