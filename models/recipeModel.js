@@ -8,10 +8,6 @@ const recipeSchema = new Schema({
   image: { type: String, required: [true, 'A recipe has to have an image'] },
   difficulty: { type: String, required: [true, 'A recipe has to have a difficulty'] },
   ingredients: Array,
-  // {
-  //   // type: Array,
-  //   // ref: 'Ingredient',
-  // },
   calories: { type: Number, required: [true, 'A recipe has to have calories'] },
   protein: { type: Number, required: [true, 'A recipe has to have protein'] },
   fat: { type: Number, required: [true, 'A recipe has to have fat'] },

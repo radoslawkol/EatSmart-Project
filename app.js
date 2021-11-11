@@ -3,6 +3,7 @@ const path = require('path');
 
 const AppError = require('./utlis/appError');
 const recipeRouter = require('./routes/recipeRoutes');
+const articlesRouter = require('./routes/articlesRoutes');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.get('/calculatorBMR', (req, res) => {
 });
 
 app.use('/api/v1/recipes', recipeRouter);
+app.use('/api/v1/articles', articlesRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
