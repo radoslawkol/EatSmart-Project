@@ -41,6 +41,10 @@ app.get('/articles', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'articlesPage.html'));
 });
 
+app.get('/articles/:id', (req, res) => {
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'articlePage.html'));
+});
+
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/api/v1/articles', articlesRouter);
 
