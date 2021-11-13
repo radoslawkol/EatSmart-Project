@@ -7,6 +7,7 @@ $large-width: 992px;
 $extra-large-width: 1200px;
 $extra-extra-width: 1400px;
 $extra-extra-extra-width: 1600px;
+$extra-extra-extra-extra-width: 1800px;
 
 @mixin x-small {
   @media (min-width: $x-small-width) {
@@ -40,6 +41,11 @@ $extra-extra-extra-width: 1600px;
 }
 @mixin x-x-x-large {
   @media (min-width: $extra-extra-extra-width) {
+    @content;
+  }
+}
+@mixin x-x-x-x-large {
+  @media (min-width: $extra-extra-extra-extra-width) {
     @content;
   }
 }

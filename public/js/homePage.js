@@ -8,7 +8,7 @@ const mediaQuery = window.matchMedia('(min-width: 992px)');
 
 const fetchArticles = async () => {
   try {
-    const res = await fetch(`http://127.0.0.1:4000/api/v1/articles?sort=-date`);
+    const res = await fetch(`http://127.0.0.1:4000/api/v1/articles?sort=-date&&fields=title,_id`);
     const { data } = await res.json();
     console.log(data);
 

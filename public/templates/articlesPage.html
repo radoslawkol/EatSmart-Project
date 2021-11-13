@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artykuły | EatSmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <!-- RESPONSIVE NAVIGATION -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <img class="nav__logo-img" src="/public/img/logo.svg" alt="Project's logo" />
+        <p class="nav__logo-name">EatSmart</p>
+      </div>
+      <button class="nav__icon"><span class="fas fa-bars"></span></button>
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="/" class="nav__link">Strona główna</a>
+        </li>
+        <li class="nav__item">
+          <a href="/about" class="nav__link">O nas</a>
+        </li>
+        <li class="nav__item nav__item--arrow">
+          <a href="/recipes" class="nav__link">Przepisy </a>
+          <button class="nav__arrow">
+            <span class="fas fa-arrow-down"></span>
+          </button>
+
+          <ul class="nav__dropdown-menu">
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Śniadania</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Obiady</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Desery</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Kolacje</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Wegetariańskie</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="" class="nav__link">Kuchnie świata</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="/articles" class="nav__link">Artykuły</a>
+        </li>
+        <li class="nav__item nav__item--arrow">
+          <a href="" class="nav__link">Kalkulatory</a>
+          <button class="nav__arrow">
+            <span class="fas fa-arrow-down"></span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li class="nav__item nav__item--drop">
+              <a href="/calculatorBMI" class="nav__link">BMI</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="/calculatorBMR" class="nav__link">BMR</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="/contact" class="nav__link">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Page -->
+    <header class="articlesPage__header">
+      <h1 class="articlesPage__heading pageHeading">Artykuły</h1>
+      <img
+        src="/public/img/articlesPage-reader.svg"
+        alt="Obrazek przedstawiający mężczyznę czytającego artykuły na stronie."
+        class="articlesPage__img"
+      />
+    </header>
+    <main class="articlesPage__main articlesPageMain">
+      <section class="articlesPageMain__articlesSection">
+        <div class="articlesPageMain__articlesSection-container">
+          <div class="articleCard">
+            <img src="/public/img/przykładowy.jpg" alt="" class="articleCard__img" />
+            <h3 class="articleCard__title">Jak dbać o zdrowie?</h3>
+            <p class="articleCard__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex repellat, quibusdam
+              asperiores explicabo velit culpa facere repellendus corporis expedita sed! Lorem ipsum
+              dolor sit amet consectetur, adipisicing elit. Id optio enim qui ducimus voluptatem
+              aspernatur ea eveniet corrupti officiis molestias incidunt recusandae fugiat
+              distinctio eaque iusto consectetur, voluptates nam tenetur delectus. Eveniet quis quam
+              doloremque. Distinctio minima iusto voluptates laudantium?
+            </p>
+            <button class="articleCard__btn btn btn--orange">
+              <a href="/articles/id" class="btn__link">Czytaj więcej</a>
+            </button>
+          </div>
+          <div class="articleCard">
+            <img src="/public/img/przykładowy.jpg" alt="" class="articleCard__img" />
+            <h3 class="articleCard__title">Jak dbać o zdrowie?</h3>
+            <p class="articleCard__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex repellat, quibusdam
+              asperiores explicabo velit culpa facere repellendus corporis expedita sed! Lorem ipsum
+              dolor sit amet consectetur, adipisicing elit. Id optio enim qui ducimus voluptatem
+              aspernatur ea eveniet corrupti officiis molestias incidunt recusandae fugiat
+              distinctio eaque iusto consectetur, voluptates nam tenetur delectus. Eveniet quis quam
+              doloremque. Distinctio minima iusto voluptates laudantium?
+            </p>
+            <button class="articleCard__btn btn btn--orange">
+              <a href="/articles/id" class="btn__link">Czytaj więcej</a>
+            </button>
+          </div>
+          <div class="articleCard">
+            <img src="/public/img/przykładowy.jpg" alt="" class="articleCard__img" />
+            <h3 class="articleCard__title">Jak dbać o zdrowie?</h3>
+            <p class="articleCard__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex repellat, quibusdam
+              asperiores explicabo velit culpa facere repellendus corporis expedita sed! Lorem ipsum
+              dolor sit amet consectetur, adipisicing elit. Id optio enim qui ducimus voluptatem
+              aspernatur ea eveniet corrupti officiis molestias incidunt recusandae fugiat
+              distinctio eaque iusto consectetur, voluptates nam tenetur delectus. Eveniet quis quam
+              doloremque. Distinctio minima iusto voluptates laudantium?
+            </p>
+            <button class="articleCard__btn btn btn--orange">
+              <a href="/articles/id" class="btn__link">Czytaj więcej</a>
+            </button>
+          </div>
+          <div class="articleCard">
+            <img src="/public/img/przykładowy.jpg" alt="" class="articleCard__img" />
+            <h3 class="articleCard__title">Jak dbać o zdrowie?</h3>
+            <p class="articleCard__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex repellat, quibusdam
+              asperiores explicabo velit culpa facere repellendus corporis expedita sed! Lorem ipsum
+              dolor sit amet consectetur, adipisicing elit. Id optio enim qui ducimus voluptatem
+              aspernatur ea eveniet corrupti officiis molestias incidunt recusandae fugiat
+              distinctio eaque iusto consectetur, voluptates nam tenetur delectus. Eveniet quis quam
+              doloremque. Distinctio minima iusto voluptates laudantium?
+            </p>
+            <button class="articleCard__btn btn btn--orange">
+              <a href="/articles/id" class="btn__link">Czytaj więcej</a>
+            </button>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+    <script src="/public/js/navigation.js"></script>
+  </body>
+</html>

@@ -390,3 +390,37 @@
   text-align: center;
   letter-spacing: 2px;
 }
+
+// ARTICLE CARD
+.articleCard {
+  width: 300px;
+  box-shadow: $box-shadow-grey;
+  padding-bottom: 1rem;
+  @include large {
+    width: 390px;
+  }
+  &__img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+  }
+  &__title {
+    margin: 2rem 1rem;
+    font-size: 2rem;
+  }
+  &__text {
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__btn {
+    display: block;
+    margin: 2rem 1rem;
+    font-size: 1.6rem;
+  }
+}

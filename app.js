@@ -37,6 +37,10 @@ app.get('/calculatorBMR', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'calculatorBMR.html'));
 });
 
+app.get('/articles', (req, res) => {
+  res.sendFile(path.join(initialPath, 'public', 'templates', 'articlesPage.html'));
+});
+
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/api/v1/articles', articlesRouter);
 
