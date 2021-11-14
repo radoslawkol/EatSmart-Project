@@ -169,7 +169,7 @@
   margin: 12rem 0;
   &__content {
     position: relative;
-    background: url('./../../img/aboutInfo-background.jpg');
+    background: url('/public/img/aboutInfo-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 4rem 2rem;
@@ -182,7 +182,7 @@
     }
     @include extra-large {
       display: flex;
-      background: url('./../../img/aboutInfo-background-large.jpg');
+      background: url('/public/img/aboutInfo-background-large.jpg');
     }
   }
 

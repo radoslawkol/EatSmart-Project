@@ -673,6 +673,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1454,7 +1455,7 @@ body {
 
 .aboutInfo__content {
   position: relative;
-  background: url("./../../img/aboutInfo-background.jpg");
+  background: url("/public/img/aboutInfo-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem 2rem;
@@ -1479,7 +1480,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: url("./../../img/aboutInfo-background-large.jpg");
+    background: url("/public/img/aboutInfo-background-large.jpg");
   }
 }
 
@@ -1615,7 +1616,7 @@ body {
 .footer {
   margin-top: 10rem;
   padding: 4rem;
-  background: linear-gradient(125deg, #fc9f0aa2 100%, #fc9f0a75 87%), url("./../../public/img/footer-background-small.jpg") no-repeat;
+  background: #ff9409;
   background-size: cover;
   background-position: center;
 }
@@ -2046,7 +2047,11 @@ body {
 }
 
 .headerHomePage {
-  padding: 2rem;
+  margin: 5rem 0;
+  padding: 4rem;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(218, 126, 19, 0.8)), to(orange)), url("/public/img/headerHome-large.jpg");
+  background: linear-gradient(rgba(218, 126, 19, 0.8), orange), url("/public/img/headerHome-large.jpg");
 }
 
 @media (min-width: 576px) {
@@ -2057,7 +2062,7 @@ body {
 
 @media (min-width: 992px) {
   .headerHomePage {
-    padding: 0 4rem;
+    padding: 4rem;
   }
 }
 
@@ -2076,10 +2081,24 @@ body {
   }
 }
 
+.headerHomePage__title {
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.headerHomePage__underTitle {
+  margin: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 .headerHomePage__introduction {
   font-size: 1.6rem;
-  text-align: center;
   line-height: 2.6rem;
+  color: #2b2a2a;
 }
 
 @media (min-width: 576px) {
@@ -2102,9 +2121,20 @@ body {
   }
 }
 
+.headerHomePage__btn {
+  margin: 3rem;
+}
+
+.headerHomePage__btn:first-of-type {
+  -webkit-animation: aboutArrowMove 0.7s infinite;
+          animation: aboutArrowMove 0.7s infinite;
+}
+
 .headerHomePage__header-link {
+  display: block;
+  padding: 1rem;
   text-decoration: none;
-  color: #e1a126;
+  color: #2b2a2a;
 }
 
 @media (min-width: 992px) {

@@ -6,7 +6,6 @@ const upBtn = document.querySelector('.goUpBtn');
 const observeUpBtn = function (entries) {
   let shown = false;
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       shown = !shown;
       upBtn.style.display = 'block';
