@@ -1,7 +1,6 @@
 // NAVIGATION
 
 .nav {
-  // position: relative;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +11,7 @@
   align-items: center;
   font-size: 1.6rem;
   background-color: $primary-color;
-  z-index: 100;
+  z-index: 1000;
   @media screen and (max-width: 840px) {
     flex-direction: column;
     align-items: start;
@@ -94,6 +93,7 @@
     height: 100%;
     padding: 1rem 1.5rem;
     color: $font-basic-color;
+    cursor: pointer;
     text-decoration: none;
     transition: color 0.3s;
     &:hover {

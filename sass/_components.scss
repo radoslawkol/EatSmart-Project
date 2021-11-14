@@ -1,6 +1,5 @@
 // BUTTONS
 .btn {
-  // padding: 0.5rem 1rem;
   border: 2px solid $font-orange-color;
   border-radius: 5px;
   background: transparent;
@@ -264,6 +263,7 @@
   position: relative;
   &__img {
     width: 100%;
+    height: 30rem;
     object-fit: cover;
     cursor: pointer;
     @include x-x-large {

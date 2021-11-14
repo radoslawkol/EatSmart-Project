@@ -229,6 +229,9 @@
   @include extra-large {
     padding: 4rem 26rem;
   }
+  @include x-x-large {
+    padding: 4rem 32rem;
+  }
   &__accordion {
     display: flex;
     justify-content: space-between;

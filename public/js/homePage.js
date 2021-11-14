@@ -3,17 +3,18 @@
 const mainHomePageLatestdishes = document.querySelector('.mainHomePage__latestdishes');
 const mainHomePageArticles = document.querySelector('.mainHomePage__articles');
 const headerHomePageSlick = document.querySelector('.headerHomePage__slick');
+const mainHomePageSlick = document.querySelector('.mainHomePage__slick');
 
-const mediaQuery = window.matchMedia('(min-width: 992px)');
+const mediaQueryNav = window.matchMedia('(min-width: 992px)');
 
-const fetchArticles = async () => {
+const fetchArticles = async (isCarousel) => {
   try {
     const res = await fetch(`http://127.0.0.1:4000/api/v1/articles?sort=-date&&fields=title,_id`);
     const { data } = await res.json();
     console.log(data);
 
+    // if (isCarousel) return data;
     let articlesElementsHtml = '';
-
     data.articles.forEach((article) => {
       const articleHtml = ` <li class="mainHomePage__item">
               <a href="/articles/${article._id}" class="mainHomePage__link">${article.title}</a>
@@ -32,7 +33,7 @@ const changeContent = async function (size) {
     if (size.matches) {
       const elements = await fetchArticles();
       const html = `
-        <h2 class="mainHomePage__title">Artykuły</h2>
+        <h2 class="mainHomePage__title">Najnowsze artykuły</h2>
             <ul class="mainHomePage__list">
               ${elements}
             </ul>
@@ -47,9 +48,9 @@ const changeContent = async function (size) {
   }
 };
 
-changeContent(mediaQuery);
+changeContent(mediaQueryNav);
 
-mediaQuery.addEventListener('change', changeContent);
+mediaQueryNav.addEventListener('change', changeContent);
 
 const getLatestDishes = async function () {
   try {
@@ -115,10 +116,8 @@ getCarousel();
 
 function listenToEvent() {
   mainHomePageLatestdishes.addEventListener('click', function (e) {
-    console.log(e.target);
     const card = e.target.closest('.mainHomePage__dishCard');
     if (card) {
-      console.log(card.dataset.id);
       window.location.pathname = `recipes/${card.dataset.id}`;
     } else {
       return;
