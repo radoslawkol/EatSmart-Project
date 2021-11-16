@@ -606,6 +606,11 @@ body {
   }
 }
 
+.articleCard__link {
+  text-decoration: none;
+  color: #2b2a2a;
+}
+
 .articleCard__img {
   width: 100%;
   height: 30rem;
@@ -2487,6 +2492,11 @@ body {
   .mainArticle__section {
     margin: 6rem 20rem 10rem;
   }
+}
+
+.mainArticle__img {
+  display: block;
+  margin: 0 auto;
 }
 
 .mainArticle__text {

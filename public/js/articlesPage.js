@@ -4,13 +4,14 @@ const renderArticles = function (articles) {
   articles.forEach((article) => {
     const html = `
           <div class="articleCard">
+          <a href="/articles/${article._id}" class="articleCard__link">
             <img src="${article.headerImg}" loading="lazy" alt="Obrazek o tytule: ${article.title}" class="articleCard__img" />
             <h3 class="articleCard__title">${article.title}</h3>
             <p class="articleCard__text">
-              ${article.description}
+            ${article.description}
             </p>
             <button class="articleCard__btn btn btn--orange">
-              <a href="/articles/id" class="btn__link">Czytaj więcej</a>
+              <a href="/articles/${article._id}" class="btn__link">Czytaj więcej</a>
             </button>
           </div>`;
     articlesContainer.insertAdjacentHTML('afterbegin', html);
