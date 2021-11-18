@@ -4,7 +4,7 @@
   margin: 5rem 0;
   padding: 4rem;
   text-align: center;
-  background: linear-gradient(rgba($secondary-color, 0.8), orange),
+  background: linear-gradient(125deg, rgba($font-white-color, 0.8), rgb(214, 210, 206)),
     url('/public/img/headerHome-large.jpg');
   @include small {
     padding: 4rem;
@@ -33,18 +33,20 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     font-style: italic;
+    color: $font-orange-color;
   }
   &__underTitle {
     margin: 2rem 0;
     font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 1px;
+    color: $font-orange-color;
   }
 
   &__introduction {
     font-size: 1.6rem;
     line-height: 2.6rem;
-    color: $font-basic-color;
+    color: $font-orange-color;
     @include small {
       padding: 4rem;
     }

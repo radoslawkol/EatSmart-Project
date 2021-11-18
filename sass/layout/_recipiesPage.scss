@@ -29,6 +29,32 @@
       width: 30%;
     }
   }
+
+  &__categoryBox {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  &__categoryBtn {
+    background-color: $secondary-color;
+    border: 0;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    color: $font-white-color;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    &:hover {
+      background-color: rgba($secondary-color, 0.8);
+    }
+    &:focus {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .mainRecipies {

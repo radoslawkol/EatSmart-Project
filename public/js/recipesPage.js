@@ -190,3 +190,26 @@ const changeActivePage = function (element) {
   const pageNum = element.firstElementChild.dataset.num;
   return pageNum;
 };
+
+const categoryBox = document.querySelector('.headerRecipies__categoryBox');
+
+const fetchByCategory = async function (e) {
+  try {
+    if (e.target.className === 'headerRecipies__categoryBtn') {
+      const category = e.target.dataset.category;
+      console.log(category);
+      const res = await fetch(`http://127.0.0.1:4000/api/v1/recipes?category=${category}`);
+      const { data } = await res.json();
+      console.log(data);
+
+      recipesContainer.innerHTML = '';
+      document.querySelector('.paginationBox__list').innerHTML = '';
+      document.querySelector('#backToAllRecipesBtn').style.display = 'block';
+      data.recipes.forEach((recipe) => renderRecipes(recipe.image, recipe.name, recipe._id));
+    }
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
+categoryBox.addEventListener('click', fetchByCategory);

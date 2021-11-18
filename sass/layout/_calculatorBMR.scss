@@ -3,8 +3,15 @@
   margin: 4rem 0;
   padding: 2rem 0;
   box-shadow: $box-shadow-grey;
+  width: 30rem;
+  @include small {
+    width: 42rem;
+  }
+  @include medium {
+    width: 46rem;
+  }
   @media screen and (min-width: 992px) {
-    padding: 4rem 6rem;
+    // padding: 4rem 6rem;
   }
 
   &__title {
@@ -22,7 +29,6 @@
   padding: 2rem;
   align-items: end;
   font-size: 1.4rem;
-
   &__group {
     width: 100%;
     display: flex;
@@ -33,6 +39,12 @@
   &__label {
     width: 80px;
     margin-right: 1rem;
+    @include large {
+      margin-right: 2rem;
+    }
+    @include extra-large {
+      margin-right: 3rem;
+    }
 
     &--gender {
       display: flex;

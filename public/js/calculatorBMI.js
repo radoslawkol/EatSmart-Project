@@ -29,28 +29,20 @@ const calcBMI = function (e) {
 
   if (result > 40) {
     assessment = 'III stopień otyłości(otyłość skrajna)';
-    console.log('otyłość skrajna - III stopień otyłości');
   } else if (result >= 35 && result <= 39.99) {
     assessment = 'II stopień otyłości';
-    console.log('II stopień otyłości');
   } else if (result >= 30 && result <= 34.99) {
     assessment = 'I stopień otyłości';
-    console.log('I stopień otyłości');
   } else if (result >= 25 && result <= 29.99) {
     assessment = 'nadwaga';
-    console.log('nadwaga');
   } else if (result >= 18.5 && result <= 24.99) {
     assessment = 'wartość prawidłowa';
-    console.log('wartość prawidłowa');
   } else if (result >= 17 && result <= 18.49) {
     assessment = 'niedowaga';
-    console.log('niedowaga');
   } else if (result >= 16 && result <= 16.99) {
     assessment = 'wychudzenie';
-    console.log('wychudzenie');
   } else {
     assessment = 'wygłodzenie';
-    console.log('wygłodzenie');
   }
 
   resultsBMI.style.display = 'block';
