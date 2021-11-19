@@ -2,10 +2,10 @@
 
 .headerHomePage {
   margin: 5rem 0;
-  padding: 4rem;
+  padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(125deg, rgba($font-white-color, 0.8), rgb(214, 210, 206)),
-    url('/public/img/headerHome-large.jpg');
+  background: linear-gradient(rgba(white, 0.8), rgba(white, 0.9)),
+    url('/public/img/headerHome-texture.jpg');
   @include small {
     padding: 4rem;
   }
@@ -29,26 +29,34 @@
   }
 
   &__title {
-    font-size: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    font-size: 3rem;
+    color: $font-basic-color;
     letter-spacing: 2px;
-    text-transform: uppercase;
     font-style: italic;
-    color: $font-orange-color;
+    text-transform: uppercase;
+  }
+  &__carrot {
+    width: 3rem;
+    margin: 0 2rem;
   }
   &__underTitle {
-    margin: 2rem 0;
-    font-size: 1.8rem;
+    margin: 2rem 0 0;
+    font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1px;
-    color: $font-orange-color;
+    color: $font-basic-color;
   }
 
   &__introduction {
     font-size: 1.6rem;
     line-height: 2.6rem;
-    color: $font-orange-color;
+    color: $font-basic-color;
     @include small {
-      padding: 4rem;
+      padding: 2rem;
     }
     @include large {
       width: 70%;
@@ -61,7 +69,7 @@
   }
 
   &__btn {
-    margin: 3rem;
+    margin: 2rem 0 3rem;
     &:first-of-type {
       animation: aboutArrowMove 0.7s infinite;
     }

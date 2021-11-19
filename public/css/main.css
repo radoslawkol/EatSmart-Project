@@ -485,7 +485,7 @@ body {
 @media (min-width: 1200px) {
   .searchBar {
     width: 60%;
-    margin: 0 auto 8rem;
+    margin: 0 auto 4rem;
   }
 }
 
@@ -715,6 +715,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 840px) {
@@ -725,7 +726,7 @@ body {
 
 .nav__logo-img {
   margin: 0 1rem;
-  width: 3rem;
+  width: 2rem;
   height: 3rem;
 }
 
@@ -1223,6 +1224,7 @@ body {
 }
 
 .aboutHeader {
+  margin-top: 5rem;
   padding: 2rem;
   width: 100%;
   height: 100vh;
@@ -1647,7 +1649,7 @@ body {
 .footer {
   margin-top: 10rem;
   padding: 4rem;
-  background: #ff9409;
+  background: #211d16;
   background-size: cover;
   background-position: center;
 }
@@ -1668,6 +1670,15 @@ body {
   }
 }
 
+.footer__about {
+  color: #fff;
+}
+
+.footer__logo {
+  font-size: 3rem;
+  color: #da7e13;
+}
+
 @media (min-width: 1400px) {
   .footer__logo {
     margin-top: 2rem;
@@ -1677,12 +1688,13 @@ body {
 .footer__title {
   margin: 2rem 0;
   font-size: 2rem;
+  color: #da7e13;
 }
 
 .footer__text {
   margin: 2rem 0;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -1726,13 +1738,13 @@ body {
 .footer__social-icon {
   margin: 0 1rem;
   font-size: 3rem;
-  color: #2b2a2a;
+  color: #da7e13;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .footer__social-icon:hover {
-  color: #fff;
+  color: rgba(218, 126, 19, 0.8);
 }
 
 .footer__links {
@@ -1750,7 +1762,7 @@ body {
 
 .footer__link {
   text-decoration: none;
-  color: #2b2a2a;
+  color: #fff;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -1763,6 +1775,11 @@ body {
   margin-bottom: 2rem;
   font-size: 1.4rem;
   font-weight: 700;
+  color: #fff;
+}
+
+.footer__mail .fas {
+  color: #da7e13;
 }
 
 .footer__policy {
@@ -1786,11 +1803,12 @@ body {
 
 .footer__policy .fas {
   margin-right: 0.5rem;
+  color: #da7e13;
 }
 
 .footer__cookies, .footer__privatePolicy {
   text-decoration: none;
-  color: #2b2a2a;
+  color: #fff;
 }
 
 .footer__copyrights {
@@ -2034,7 +2052,7 @@ body {
 
 .preparation {
   margin: 4rem;
-  padding: 4rem;
+  padding: 4rem 4rem;
   -webkit-box-shadow: 0 2px 3px rgba(167, 165, 165, 0.8);
           box-shadow: 0 2px 3px rgba(167, 165, 165, 0.8);
 }
@@ -2056,12 +2074,14 @@ body {
     margin: 0 2rem;
     -ms-flex-item-align: start;
         align-self: flex-start;
+    padding: 4rem 8rem;
   }
 }
 
 .preparation__text {
+  margin-top: 4rem;
   font-size: 1.4rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
 
 .preparation__strong {
@@ -2071,7 +2091,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2rem;
+  margin: 4rem 0 0;
   color: #e1a126;
   font-size: 1.8rem;
   font-weight: 400;
@@ -2079,9 +2099,10 @@ body {
 
 .headerHomePage {
   margin: 5rem 0;
-  padding: 4rem;
+  padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(125deg, rgba(255, 255, 255, 0.8), #d6d2ce), url("/public/img/headerHome-large.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.9))), url("/public/img/headerHome-texture.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url("/public/img/headerHome-texture.jpg");
 }
 
 @media (min-width: 576px) {
@@ -2112,30 +2133,45 @@ body {
 }
 
 .headerHomePage__title {
-  font-size: 2.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4rem;
+  font-size: 3rem;
+  color: #2b2a2a;
   letter-spacing: 2px;
-  text-transform: uppercase;
   font-style: italic;
-  color: #e1a126;
+  text-transform: uppercase;
+}
+
+.headerHomePage__carrot {
+  width: 3rem;
+  margin: 0 2rem;
 }
 
 .headerHomePage__underTitle {
-  margin: 2rem 0;
-  font-size: 1.8rem;
+  margin: 2rem 0 0;
+  font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #e1a126;
+  color: #2b2a2a;
 }
 
 .headerHomePage__introduction {
   font-size: 1.6rem;
   line-height: 2.6rem;
-  color: #e1a126;
+  color: #2b2a2a;
 }
 
 @media (min-width: 576px) {
   .headerHomePage__introduction {
-    padding: 4rem;
+    padding: 2rem;
   }
 }
 
@@ -2154,7 +2190,7 @@ body {
 }
 
 .headerHomePage__btn {
-  margin: 3rem;
+  margin: 2rem 0 3rem;
 }
 
 .headerHomePage__btn:first-of-type {
@@ -2333,7 +2369,7 @@ body {
 
 .headerRecipies__categoryBox {
   width: 80%;
-  margin: 3rem auto;
+  margin: 1rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

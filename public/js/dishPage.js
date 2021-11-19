@@ -8,6 +8,7 @@ const dishText = document.querySelector('.preparation__text');
 const dishCarbohydratesQuantity = document.querySelector('.nutrition__carbohydrates-quantity');
 const dishProteinQuantity = document.querySelector('.nutrition__protein-quantity');
 const dishFatQuantity = document.querySelector('.nutrition__fat-quantity');
+const dishCalories = document.querySelector('.nutrition__kcal');
 const ingredientsTable = document.querySelector('.ingredientsTable');
 
 const fetchData = async function () {
@@ -30,6 +31,7 @@ const fetchData = async function () {
     dishCarbohydratesQuantity.textContent = recipe.carbohydrates + 'g';
     dishProteinQuantity.textContent = recipe.protein + 'g';
     dishFatQuantity.textContent = recipe.fat + 'g';
+    dishCalories.textContent = recipe.calories + ' ' + 'kcal';
 
     // generate and fill ingredients table
     recipe.ingredients.forEach((i) => {

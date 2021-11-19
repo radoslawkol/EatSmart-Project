@@ -140,7 +140,7 @@
 
 .preparation {
   margin: 4rem;
-  padding: 4rem;
+  padding: 4rem 4rem;
   box-shadow: $box-shadow-grey;
   @include small {
     margin: 8rem;
@@ -150,15 +150,17 @@
     grid-row: 1/3;
     margin: 0 2rem;
     align-self: flex-start;
+    padding: 4rem 8rem;
   }
   &__text {
+    margin-top: 4rem;
     font-size: 1.4rem;
-    line-height: 2rem;
+    line-height: 2.4rem;
   }
   &__strong {
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    margin: 4rem 0 0;
     color: $font-orange-color;
     font-size: 1.8rem;
     font-weight: 400;

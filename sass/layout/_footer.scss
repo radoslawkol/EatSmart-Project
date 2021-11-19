@@ -3,9 +3,7 @@
 .footer {
   margin-top: 10rem;
   padding: 4rem;
-  // background: linear-gradient(125deg, #ecb15379 100%, #fc9f0a75 87%),
-  //   url('./../../public/img/footer-background-small.jpg') no-repeat;
-  background: #ff9409;
+  background: #211d16;
   background-size: cover;
   background-position: center;
   @include small {
@@ -19,8 +17,11 @@
     }
   }
   &__about {
+    color: $font-white-color;
   }
   &__logo {
+    font-size: 3rem;
+    color: $secondary-color;
     @include x-x-large {
       margin-top: 2rem;
     }
@@ -28,11 +29,12 @@
   &__title {
     margin: 2rem 0;
     font-size: 2rem;
+    color: $secondary-color;
   }
   &__text {
     margin: 2rem 0;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     @include small {
       padding-right: 6rem;
       font-size: 1.4rem;
@@ -55,10 +57,10 @@
     &-icon {
       margin: 0 1rem;
       font-size: 3rem;
-      color: $font-basic-color;
+      color: $secondary-color;
       transition: color 0.3s;
       &:hover {
-        color: $font-white-color;
+        color: rgba($secondary-color, 0.8);
       }
     }
   }
@@ -71,7 +73,7 @@
   }
   &__link {
     text-decoration: none;
-    color: $font-basic-color;
+    color: $font-white-color;
     transition: color 0.3s;
     &:hover,
     &:focus {
@@ -82,6 +84,10 @@
     margin-bottom: 2rem;
     font-size: 1.4rem;
     font-weight: 700;
+    color: $font-white-color;
+    .fas {
+      color: $secondary-color;
+    }
   }
 
   &__policy {
@@ -95,12 +101,13 @@
     }
     .fas {
       margin-right: 0.5rem;
+      color: $secondary-color;
     }
   }
   &__cookies,
   &__privatePolicy {
     text-decoration: none;
-    color: $font-basic-color;
+    color: $font-white-color;
   }
 
   &__copyrights {
