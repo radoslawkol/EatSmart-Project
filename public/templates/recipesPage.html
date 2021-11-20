@@ -21,81 +21,21 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/public/css/main.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(function () {
+        $('#includedNavigation').load('/public/templates/navigation.html');
+      });
+    </script>
   </head>
   <body>
-    <!-- RESPONSIVE NAVIGATION -->
-    <nav class="nav">
-      <div class="nav__logo">
-        <img class="nav__logo-img" src="/public/img/logo.svg" alt="Project's logo" />
-        <p class="nav__logo-name">EatSmart</p>
-      </div>
-      <button class="nav__icon"><span class="fas fa-bars"></span></button>
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="/" class="nav__link">Strona główna</a>
-        </li>
-        <li class="nav__item">
-          <a href="/about" class="nav__link">O nas</a>
-        </li>
-        <li class="nav__item nav__item--arrow">
-          <a href="/recipes" class="nav__link">Przepisy </a>
-          <!-- <button class="nav__arrow">
-            <span class="fas fa-arrow-down"></span>
-          </button> -->
+    <div id="includedNavigation"></div>
 
-          <!-- <ul class="nav__dropdown-menu">
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Śniadania</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Obiady</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Desery</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Kolacje</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Wegetariańskie</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Kuchnie świata</a>
-            </li>
-          </ul> -->
-        </li>
-        <li class="nav__item">
-          <a href="/articles" class="nav__link">Artykuły</a>
-        </li>
-        <li class="nav__item nav__item--arrow">
-          <a class="nav__link">Kalkulatory</a>
-          <button class="nav__arrow">
-            <span class="fas fa-arrow-down"></span>
-          </button>
-          <ul class="nav__dropdown-menu">
-            <li class="nav__item nav__item--drop">
-              <a href="/calculatorBMI" class="nav__link">BMI</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="calculatorBMR" class="nav__link">BMR</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav__item">
-          <a href="/contact" class="nav__link">Kontakt</a>
-        </li>
-      </ul>
-    </nav>
     <!-- PAGE -->
     <header class="headerRecipies">
       <div class="headerRecipies__content">
@@ -129,7 +69,7 @@
         <ul class="paginationBox__list"></ul>
       </div>
     </main>
-    <script src="/public/js/navigation.js"></script>
+
     <script src="/public/js/recipesPage.js"></script>
   </body>
 </html>

@@ -2636,4 +2636,35 @@ body {
 .mainArticle__slick .slick-dots {
   display: block !important;
 }
+
+.cookies__wrapper {
+  margin: 4rem;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .cookies__wrapper {
+    margin: 4rem 10rem;
+  }
+}
+
+.cookies__wrapper ul {
+  list-style: none;
+}
+
+.cookies__wrapper p {
+  font-size: 1.4rem;
+}
+
+.cookies__wrapper h1 {
+  margin: 2rem;
+}
+
+.cookies__wrapper h2 {
+  padding: 2rem;
+}
+
+.cookies__wrapper li {
+  font-size: 1.2rem;
+}
 /*# sourceMappingURL=main.css.map */

@@ -19,7 +19,6 @@ const fetchData = async function () {
     const { data } = await res.json();
 
     const { recipe } = data;
-    console.log(data);
 
     // Put data to the HTML
     document.title = `${recipe.name} | EatSmart`;

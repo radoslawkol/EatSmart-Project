@@ -1,0 +1,23 @@
+.cookies__wrapper {
+  margin: 4rem;
+  text-align: center;
+  @include large {
+    margin: 4rem 10rem;
+  }
+  ul {
+    list-style: none;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  h1 {
+    margin: 2rem;
+  }
+
+  h2 {
+    padding: 2rem;
+  }
+  li {
+    font-size: 1.2rem;
+  }
+}

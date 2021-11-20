@@ -19,10 +19,22 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/public/css/main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(function () {
+        $('#includedNavigation').load('/public/templates/navigation.html');
+      });
+    </script>
   </head>
   <body>
     <!-- RESPONSIVE NAVIGATION -->
-    <nav class="nav">
+    <div id="includedNavigation"></div>
+    <!-- <nav class="nav">
       <div class="nav__logo">
         <img class="nav__logo-img" src="/public/img/logo.svg" alt="Project's logo" />
         <p class="nav__logo-name">EatSmart</p>
@@ -37,30 +49,6 @@
         </li>
         <li class="nav__item nav__item--arrow">
           <a href="/recipes" class="nav__link">Przepisy </a>
-          <!-- <button class="nav__arrow">
-            <span class="fas fa-arrow-down"></span>
-          </button> -->
-
-          <!-- <ul class="nav__dropdown-menu">
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Śniadania</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Obiady</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Desery</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Kolacje</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Wegetariańskie</a>
-            </li>
-            <li class="nav__item nav__item--drop">
-              <a href="" class="nav__link">Kuchnie świata</a>
-            </li>
-          </ul> -->
         </li>
         <li class="nav__item">
           <a href="/articles" class="nav__link">Artykuły</a>
@@ -79,11 +67,8 @@
             </li>
           </ul>
         </li>
-        <li class="nav__item">
-          <a href="/contact" class="nav__link">Kontakt</a>
-        </li>
       </ul>
-    </nav>
+    </nav> -->
     <!-- BMI PAGE -->
     <header class="calculatorHeader">
       <h1 class="calculatorHeading">Kalkulator BMI</h1>
@@ -195,7 +180,6 @@
       </section>
       <a href="/calculatorBMR" class="cta cta--orange">Policz też swoje BMR</a>
     </main>
-    <script src="/public/js/navigation.js"></script>
     <script src="/public/js/calculatorBMI.js"></script>
   </body>
 </html>

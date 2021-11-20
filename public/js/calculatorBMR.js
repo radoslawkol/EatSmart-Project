@@ -23,9 +23,6 @@ submitBtn.addEventListener('click', (e) => {
   errorMessageBMR.style.display = 'none';
   resultsBMR.style.display = 'none';
   const options = selectBMR.options;
-  for (o of options) {
-    o.selected = false;
-  }
 
   if (!height || !weight || !age) {
     errorMessageBMR.style.display = 'block';
@@ -69,6 +66,10 @@ submitBtn.addEventListener('click', (e) => {
     default:
       break;
   }
+  for (o of options) {
+    o.selected = false;
+  }
+
   const result = bmr * activityLevelIndex;
 
   metabolism.innerText = `${bmr.toFixed(0)} kcal`;
