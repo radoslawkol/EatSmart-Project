@@ -38,6 +38,7 @@
     <script>
       $(function () {
         $('#includedNavigation').load('/public/templates/navigation.html');
+        $('#includedFooter').load('/public/templates/footer.html');
       });
     </script>
   </head>
@@ -79,127 +80,6 @@
     </header>
     <main class="mainHomePage">
       <section class="mainHomePage__latestdishes">
-        <!-- <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div>
-        <div class="dishCard mainHomePage__dishCard">
-          <img
-            src="/public/img/about-plate-1.jpg"
-            alt=""
-            class="dishCard__img mainHomePage__dishCard-img"
-          />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
-          <h3 class="dishCard__title mainHomePage__dishCard-title">Nazwa dania</h3>
-          <button class="btn btn--orange"><a href="" class="btn__link">Sprawdź</a></button>
-        </div> -->
         <button class="btn btn--orange mainHomePage__btn">
           <a class="btn__link" href="">Sprawdź więcej przepisów</a>
         </button>
@@ -245,63 +125,13 @@
         <div class="aboutPartenrs__container"></div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__about">
-          <h2 class="footer__logo">EatSmart</h2>
-          <div class="footer__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perferendis quos aliquam
-            illum cumque veritatis tempore illo dolor, atque rem at sunt quidem eum. Inventore
-            molestias sapiente repellat deleniti numquam?
-          </div>
-          <button class="btn btn--white">
-            <a href="/about" class="btn__link">Poznaj nas</a>
-          </button>
-          <div class="footer__social">
-            <a href="" class="footer__social-icon"><span class="fab fa-facebook"></span></a>
-            <a href="" class="footer__social-icon"><span class="fab fa-instagram"></span></a>
-          </div>
-        </div>
-        <div class="footer__seeMore">
-          <h3 class="footer__title">Zobacz też</h3>
-          <ul class="footer__links">
-            <a href="/recipes" class="footer__link">Najlepsze przepisy</a>
-            <a href="/articles" class="footer__link">Artykuły o zdrowym odżywianiu</a>
-            <a href="" class="footer__link">Kuchnie świata</a
-            ><a href="/calculatorBMI" class="footer__link">Oblicz swoje BMI</a
-            ><a href="/calculatorBMR" class="footer__link">Kalkulator BMR</a>
-          </ul>
-        </div>
-        <div class="footer__contact">
-          <h3 class="footer__title">Kontakt</h3>
-          <p class="footer__mail"><span class="fas fa-envelope"></span> eatsmart.zwzt@gmail.com</p>
-          <button class="btn btn--white">
-            <a href="" class="btn__link">Napisz do nas</a>
-          </button>
-          <div class="footer__policy">
-            <a href="/cookies" class="footer__cookies"
-              ><span class="fas fa-cookie-bite"></span>Pliki cookies</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="footer__copyrights">
-      <p class="footer__copy">
-        Copyrights &copy;EatSmart <span id="year">2021</span> | All rights reserved
-      </p>
-      <p class="footer__make">Designed by Aleksandra Kołoczek, created by Radosław Kołoczek</p>
-    </div>
+    <!-- FOOTER -->
+    <div id="includedFooter"></div>
     <button class="goUpBtn">
       <a href="#" class="goUpBtn__link"><span class="fas fa-chevron-up goUpBtn__icon"></span></a>
     </button>
 
     <script src="/public//js/homePage.js" async></script>
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script> -->
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script
       type="text/javascript"
