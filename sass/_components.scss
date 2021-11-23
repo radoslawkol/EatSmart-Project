@@ -180,6 +180,7 @@
   border-radius: 50%;
   background-color: $font-basic-color;
   transition: background-color 0.3s;
+  z-index: 100;
   &:hover {
     background-color: rgba($secondary-color, 0.6);
   }
@@ -265,16 +266,15 @@
   position: relative;
   &__img {
     width: 100%;
-    height: 30rem;
+    // height: 30rem;
     object-fit: cover;
     cursor: pointer;
     @include x-x-large {
-      height: 20rem;
+      // height: 20rem;
     }
   }
   &__title {
     padding: 1rem 0;
-    // text-align: center;
     font-size: 1.4rem;
     font-weight: 400;
   }
@@ -428,5 +428,41 @@
     display: block;
     margin: 2rem 1rem;
     font-size: 1.6rem;
+  }
+}
+
+.cookiesPopup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $dark-color;
+  padding: 1rem;
+  z-index: 1000;
+  &.hidden {
+    display: none;
+  }
+  @include medium {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  &__text {
+    color: $font-white-color;
+    font-size: 1.2rem;
+    @include medium {
+      width: 70%;
+    }
+  }
+  &__btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    &:hover {
+      color: $font-basic-color;
+    }
+  }
+  &__link {
+    color: $font-orange-color;
   }
 }

@@ -323,6 +323,7 @@ body {
   background-color: #2b2a2a;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  z-index: 100;
 }
 
 .goUpBtn:hover {
@@ -432,16 +433,9 @@ body {
 
 .dishCard__img {
   width: 100%;
-  height: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
-}
-
-@media (min-width: 1400px) {
-  .dishCard__img {
-    height: 20rem;
-  }
 }
 
 .dishCard__title {
@@ -640,6 +634,59 @@ body {
   display: block;
   margin: 2rem 1rem;
   font-size: 1.6rem;
+}
+
+.cookiesPopup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #2b2a2a;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.cookiesPopup.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cookiesPopup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.cookiesPopup__text {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .cookiesPopup__text {
+    width: 70%;
+  }
+}
+
+.cookiesPopup__btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.cookiesPopup__btn:hover {
+  color: #2b2a2a;
+}
+
+.cookiesPopup__link {
+  color: #e1a126;
 }
 
 @-webkit-keyframes aboutArrowMove {
@@ -2146,7 +2193,6 @@ body {
   font-size: 3rem;
   color: #2b2a2a;
   letter-spacing: 2px;
-  font-style: italic;
   text-transform: uppercase;
 }
 
@@ -2439,6 +2485,11 @@ body {
 
 .mainRecipies__dishCard {
   width: 25rem;
+}
+
+.mainRecipies__btn {
+  display: none;
+  margin: 2rem auto;
 }
 
 .articlesPage__header {

@@ -31,12 +31,14 @@
       $(function () {
         $('#includedNavigation').load('/public/templates/navigation.html');
         $('#includedFooter').load('/public/templates/footer.html');
+        $('#includedCookiesPopup').load('/public/templates/cookiesPopup.html');
       });
     </script>
   </head>
   <body>
     <div id="includedNavigation"></div>
 
+    <div id="includedCookiesPopup"></div>
     <!-- PAGE -->
     <header class="headerRecipies">
       <div class="headerRecipies__content">
@@ -57,12 +59,12 @@
         <button class="headerRecipies__categoryBtn" data-category="vegetarian">
           Wegetariańskie
         </button>
-        <button class="headerRecipies__categoryBtn" data-category="meet">Mięso</button>
-        <button class="headerRecipies__categoryBtn" data-category="lunch">Śniadania</button>
+        <button class="headerRecipies__categoryBtn" data-category="salads">Sałatki</button>
+        <button class="headerRecipies__categoryBtn" data-category="breakfast">Śniadania</button>
       </div>
     </header>
     <main class="mainRecipies">
-      <button class="btn btn__backToAllRecipes" id="backToAllRecipesBtn">
+      <button class="mainRecipies__btn btn btn--orange" id="backToAllRecipesBtn">
         <a href="/recipes" class="btn__link">Wróć do wszystkich przepisów</a>
       </button>
       <section class="mainRecipies__container"></section>
