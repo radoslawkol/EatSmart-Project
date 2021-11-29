@@ -17,31 +17,31 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'homePage.html'));
 });
 
-app.get('/recipes', (req, res) => {
+app.get('/przepisy', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'recipesPage.html'));
 });
 
-app.get('/recipes/:id', (req, res) => {
+app.get('/przepisy/:id', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'dishPage.html'));
 });
 
-app.get('/about', (req, res) => {
+app.get('/o-nas', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'about.html'));
 });
 
-app.get('/calculatorBMI', (req, res) => {
+app.get('/kalkulator-BMI', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'calculatorBMI.html'));
 });
 
-app.get('/calculatorBMR', (req, res) => {
+app.get('/kalkulator-BMR', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'calculatorBMR.html'));
 });
 
-app.get('/articles', (req, res) => {
+app.get('/artykuly', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'articlesPage.html'));
 });
 
-app.get('/articles/:id', (req, res) => {
+app.get('/artykuly/:id', (req, res) => {
   res.sendFile(path.join(initialPath, 'public', 'templates', 'articlePage.html'));
 });
 

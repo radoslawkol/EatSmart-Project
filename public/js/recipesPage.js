@@ -19,7 +19,7 @@ const renderRecipes = function (img, name, id) {
             <span class="fas fa-heart favouriteBtn__icon"></span>
           </button>
           <h3 class="dishCard__title mainRecipies__dishCard-title">${name}</h3>
-          <button class="btn btn--orange"><a href="/recipes/${id}" class="btn__link">Sprawdź</a></button>
+          <button class="btn btn--orange"><a href="/przepisy/${id}" class="btn__link">Sprawdź</a></button>
         </div>
     `;
 
@@ -90,12 +90,9 @@ const fetchRecipes = async function (page = '0') {
       renderRecipes(recipe.image, recipe.name, recipe._id);
     });
     recipesContainer.addEventListener('click', function (e) {
-      console.log(e.target);
       const card = e.target.closest('.mainRecipies__dishCard');
-      console.log(card);
       if (card) {
-        console.log(card.dataset.id);
-        window.location.pathname = `recipes/${card.dataset.id}`;
+        window.location.pathname = `przepisy/${card.dataset.id}`;
       } else {
         return;
       }

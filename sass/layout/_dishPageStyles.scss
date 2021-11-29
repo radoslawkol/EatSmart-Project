@@ -63,6 +63,9 @@
     }
   }
   &__difficulty {
+    &-icon {
+      color: $font-orange-color;
+    }
   }
 }
 

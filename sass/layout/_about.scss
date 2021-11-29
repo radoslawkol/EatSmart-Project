@@ -273,15 +273,3 @@
     line-height: 1.8rem;
   }
 }
-
-.aboutPartenrs {
-  &__container {
-    display: block;
-    height: 20rem;
-    margin: 2rem;
-    box-shadow: $box-shadow-grey;
-    @include large {
-      margin: 6rem;
-    }
-  }
-}

@@ -4,7 +4,7 @@ const renderArticles = function (articles) {
   articles.forEach((article) => {
     const html = `
           <div class="articleCard">
-          <a href="/articles/${article._id}" class="articleCard__link">
+          <a href="/artykuly/${article._id}" class="articleCard__link">
             <img src="${article.headerImg}" loading="lazy" alt="Obrazek o tytule: ${article.title}" class="articleCard__img" />
             <h3 class="articleCard__title">${article.title}</h3>
             <p class="articleCard__text">

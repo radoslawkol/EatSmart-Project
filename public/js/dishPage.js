@@ -25,7 +25,7 @@ const fetchData = async function () {
     dishTitle.textContent = recipe.name;
     dishImg.setAttribute('src', `${recipe.image}`);
     dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;
-    dishDifficulty.textContent = recipe.difficulty;
+    dishDifficulty.innerHTML = `<i class="far fa-star headerDish__difficulty-icon"></i> ${recipe.difficulty}`;
     dishText.innerHTML = recipe.preparation;
     dishCarbohydratesQuantity.textContent = recipe.carbohydrates + 'g';
     dishProteinQuantity.textContent = recipe.protein + 'g';
