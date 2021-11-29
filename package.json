@@ -4,7 +4,8 @@
   "description": "This is a website about healthy nutrition, it's consists of various recipes",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "node server.js",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "'./node_modules/.bin/eslint' . --fix",
@@ -24,5 +25,8 @@
     "eslint-plugin-import": "^2.24.2",
     "ndb": "^1.1.5",
     "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
