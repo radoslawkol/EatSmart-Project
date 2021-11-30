@@ -1,4 +1,7 @@
 'use strict';
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(process.env);
 
 const headerImg = document.querySelector('.headerArticle__img');
 const headerHeading = document.querySelector('.headerArticle__heading');
