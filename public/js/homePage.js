@@ -18,7 +18,7 @@ const fetchArticles = async (isCarousel) => {
     let articlesElementsHtml = '';
     data.articles.forEach((article) => {
       const articleHtml = ` <li class="mainHomePage__item">
-              <a href="/artykuły/${article._id}" class="mainHomePage__link">${article.title}</a>
+              <a href="/artykuly/${article._id}" class="mainHomePage__link">${article.title}</a>
             </li>`;
       articlesElementsHtml += articleHtml;
     });
@@ -119,7 +119,7 @@ function listenToEvent() {
   mainHomePageLatestdishes.addEventListener('click', function (e) {
     const card = e.target.closest('.mainHomePage__dishCard');
     if (card) {
-      window.location.pathname = `recipes/${card.dataset.id}`;
+      window.location.pathname = `przepisy/${card.dataset.id}`;
     } else {
       return;
     }
