@@ -18,7 +18,7 @@ const fetchArticles = async (isCarousel) => {
     let articlesElementsHtml = '';
     data.articles.forEach((article) => {
       const articleHtml = ` <li class="mainHomePage__item">
-              <a href="/articles/${article._id}" class="mainHomePage__link">${article.title}</a>
+              <a href="/artykuły/${article._id}" class="mainHomePage__link">${article.title}</a>
             </li>`;
       articlesElementsHtml += articleHtml;
     });
@@ -38,7 +38,7 @@ const changeContent = async function (size) {
             <ul class="mainHomePage__list">
               ${elements}
             </ul>
-            <img src="/public/img/homePage-cook.svg" alt="" class="mainHomePage__illustration" />
+            <img src="/public/img/homePage-cook.svg" alt="Ilustracja przedstawiająca kucharza" class="mainHomePage__illustration" />
         `;
       mainHomePageArticles.innerHTML = html;
     } else {
@@ -85,7 +85,7 @@ const getLatestDishes = async function () {
   }
 
   mainHomePageLatestdishes.innerHTML += ` <button class="btn btn--orange mainHomePage__btn">
-          <a class="btn__link" href="/recipes">Sprawdź więcej przepisów</a>
+          <a class="btn__link" href="/przepisy">Sprawdź więcej przepisów</a>
         </button>`;
 };
 getLatestDishes();
