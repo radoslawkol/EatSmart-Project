@@ -75,7 +75,7 @@ const getLatestDishes = async function () {
               <span class="fas fa-heart favouriteBtn__icon"></span>
             </button>
             <h3 class="dishCard__title mainHomePage__dishCard-title">${recipe.name}</h3>
-            <button class="btn btn--orange"><a href="recipes/${recipe._id}" class="btn__link">Sprawdź</a></button>
+            <button class="btn btn--orange"><a href="przepisy/${recipe._id}" class="btn__link">Sprawdź</a></button>
           </div>
     `;
       mainHomePageLatestdishes.innerHTML += cardHtml;
