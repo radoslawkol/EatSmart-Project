@@ -1736,7 +1736,6 @@ body {
 
 .footer__logo {
   font-size: 3rem;
-  color: #da7e13;
 }
 
 @media (min-width: 1400px) {
@@ -1746,6 +1745,7 @@ body {
 }
 
 .footer__logo-link {
+  color: #da7e13;
   text-decoration: none;
 }
 

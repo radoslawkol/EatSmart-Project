@@ -21,11 +21,11 @@
   }
   &__logo {
     font-size: 3rem;
-    color: $secondary-color;
     @include x-x-large {
       margin-top: 2rem;
     }
     &-link {
+      color: $secondary-color;
       text-decoration: none;
     }
   }

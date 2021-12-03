@@ -15,9 +15,6 @@ const renderRecipes = function (img, name, id) {
             alt="${name}"
             class="dishCard__img mainRecipies__dishCard-img"
           />
-          <button class="favouriteBtn">
-            <span class="fas fa-heart favouriteBtn__icon"></span>
-          </button>
           <h3 class="dishCard__title mainRecipies__dishCard-title">${name}</h3>
           <button class="btn btn--orange"><a href="/przepisy/${id}" class="btn__link">Sprawdź</a></button>
         </div>
