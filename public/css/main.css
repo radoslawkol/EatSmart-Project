@@ -1745,6 +1745,10 @@ body {
   }
 }
 
+.footer__logo-link {
+  text-decoration: none;
+}
+
 .footer__title {
   margin: 2rem 0;
   font-size: 2rem;

@@ -25,6 +25,9 @@
     @include x-x-large {
       margin-top: 2rem;
     }
+    &-link {
+      text-decoration: none;
+    }
   }
   &__title {
     margin: 2rem 0;
