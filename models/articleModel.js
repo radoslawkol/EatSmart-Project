@@ -5,6 +5,7 @@ const articleSchema = new mongoose.Schema({
   author: String,
   date: { type: Date, default: Date.now },
   headerImg: { type: String, required: true },
+  headerImgAlt: { type: String, required: true },
   description: { type: String, required: true },
   descriptionHTML: { type: String, required: true },
 });

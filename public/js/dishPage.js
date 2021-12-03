@@ -27,6 +27,7 @@ const fetchData = async function () {
       .setAttribute('content', `${recipe.name} - Przepis | Smakuj Zdrowo`);
     dishTitle.textContent = recipe.name;
     dishImg.setAttribute('src', `${recipe.image}`);
+    dishImg.setAttribute('alt', `${recipe.name}`);
     dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;
     dishDifficulty.innerHTML = `<i class="far fa-star headerDish__difficulty-icon"></i> ${recipe.difficulty}`;
     dishText.innerHTML = recipe.preparation;

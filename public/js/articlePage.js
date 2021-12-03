@@ -21,6 +21,7 @@ const fetchData = async function () {
       .querySelector('meta[property="og:title"]')
       .setAttribute('content', `${article.title} - Smakuj Zdrowo`);
     headerImg.setAttribute('src', article.headerImg);
+    headerImg.setAttribute('alt', article.headerImgAlt);
     headerHeading.textContent = article.title;
     date.textContent = ` ${new Date(article.date).getDate()}.${
       new Date(article.date).getMonth() + 1
