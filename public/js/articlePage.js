@@ -16,7 +16,10 @@ const fetchData = async function () {
     const { article } = data;
 
     // Put data to the HTML
-    document.title = `${article.title} | EatSmart`;
+    document.title = `${article.title} - Smakuj Zdrowo`;
+    document
+      .querySelector('meta[property="og:title"]')
+      .setAttribute('content', `${article.title} - Smakuj Zdrowo`);
     headerImg.setAttribute('src', article.headerImg);
     headerHeading.textContent = article.title;
     date.textContent = ` ${new Date(article.date).getDate()}.${

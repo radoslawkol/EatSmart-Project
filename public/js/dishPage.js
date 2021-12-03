@@ -21,7 +21,10 @@ const fetchData = async function () {
     const { recipe } = data;
 
     // Put data to the HTML
-    document.title = `${recipe.name} | EatSmart`;
+    document.title = `${recipe.name} - Przepis | Smakuj Zdrowo`;
+    document
+      .querySelector('meta[property="og:title"]')
+      .setAttribute('content', `${recipe.name} - Przepis | Smakuj Zdrowo`);
     dishTitle.textContent = recipe.name;
     dishImg.setAttribute('src', `${recipe.image}`);
     dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;
