@@ -16,10 +16,7 @@ const fetchData = async function () {
     const url = location.pathname.split('/');
     const id = url[url.length - 1];
     console.log(id);
-    const res = await fetch(
-      `https://guarded-reaches-99642.herokuapp.com/api/v1/recipes/${id}
-      }`
-    );
+    const res = await fetch(`https://guarded-reaches-99642.herokuapp.com/api/v1/recipes/${id}`);
     const { data } = await res.json();
 
     const { recipe } = data;
