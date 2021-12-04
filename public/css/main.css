@@ -802,6 +802,8 @@ body {
   margin: 0 1rem;
   width: 2rem;
   height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .nav__logo-name {
