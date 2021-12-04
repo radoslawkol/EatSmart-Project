@@ -27,6 +27,7 @@ const fetchData = async function () {
       .querySelector('meta[property="og:title"]')
       .setAttribute('content', `${recipe.name} - Przepis | Smakuj Zdrowo`);
     dishTitle.textContent = recipe.name;
+    dishImg.style.display = 'block';
     dishImg.setAttribute('src', `${recipe.image}`);
     dishImg.setAttribute('alt', `${recipe.name}`);
     dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;

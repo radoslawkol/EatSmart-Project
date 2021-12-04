@@ -721,6 +721,11 @@ body {
   height: 14rem;
 }
 
+.loader {
+  display: block;
+  margin: 10rem auto;
+}
+
 @-webkit-keyframes aboutArrowMove {
   0% {
     -webkit-transform: translateY(0);
