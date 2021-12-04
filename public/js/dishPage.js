@@ -10,6 +10,7 @@ const dishProteinQuantity = document.querySelector('.nutrition__protein-quantity
 const dishFatQuantity = document.querySelector('.nutrition__fat-quantity');
 const dishCalories = document.querySelector('.nutrition__kcal');
 const ingredientsTable = document.querySelector('.ingredientsTable');
+const loader = document.querySelector('.loader');
 
 const fetchData = async function () {
   try {
@@ -28,6 +29,7 @@ const fetchData = async function () {
       .setAttribute('content', `${recipe.name} - Przepis | Smakuj Zdrowo`);
     dishTitle.textContent = recipe.name;
     dishImg.style.display = 'block';
+    loader.style.display = 'none';
     dishImg.setAttribute('src', `${recipe.image}`);
     dishImg.setAttribute('alt', `${recipe.name}`);
     dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;
