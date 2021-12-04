@@ -63,6 +63,8 @@ const getLatestDishes = async function () {
     mainHomePageLatestdishes.innerHTML = '';
 
     data.recipes.forEach((recipe) => {
+      const urlName = recipe.name.toLowerCase().replaceAll(' ', '-');
+      console.log(urlName);
       const cardHtml = `
      <div class="dishCard mainHomePage__dishCard" data-id="${recipe._id}">
             <img
@@ -72,7 +74,7 @@ const getLatestDishes = async function () {
             />
   
             <h3 class="dishCard__title mainHomePage__dishCard-title">${recipe.name}</h3>
-            <button class="btn btn--orange"><a href="przepisy/${recipe._id}" class="btn__link">Sprawdź</a></button>
+            <button class="btn btn--orange"><a href="przepisy/${urlName}" class="btn__link">Sprawdź</a></button>
           </div>
     `;
       mainHomePageLatestdishes.innerHTML += cardHtml;
