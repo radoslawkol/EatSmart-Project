@@ -29,6 +29,7 @@ const fetchData = async function () {
       .setAttribute('content', `${recipe.name} - Przepis | Smakuj Zdrowo`);
     dishTitle.textContent = recipe.name;
     dishImg.style.display = 'block';
+    dishImg.style.margin = '0 auto';
     loader.style.display = 'none';
     dishImg.setAttribute('src', `${recipe.image}`);
     dishImg.setAttribute('alt', `${recipe.name}`);
