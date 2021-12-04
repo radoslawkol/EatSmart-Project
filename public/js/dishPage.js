@@ -15,11 +15,8 @@ const fetchData = async function () {
   try {
     const url = location.pathname.split('/');
     const id = url[url.length - 1];
-    const convertDishName = url[url.length - 1].replaceAll('-', ' ');
-    console.log(convertDishName[0].toUpperCase() + convertDishName.split(2));
     const res = await fetch(
-      `https://guarded-reaches-99642.herokuapp.com/api/v1/recipes/name=${
-        convertDishName[0].toUpperCase() + convertDishName.split(1)
+      `https://guarded-reaches-99642.herokuapp.com/api/v1/recipes/${id}
       }`
     );
     const { data } = await res.json();
