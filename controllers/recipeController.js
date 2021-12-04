@@ -65,8 +65,13 @@ exports.getAllRecipes = async (req, res, next) => {
 exports.getRecipe = async (req, res, next) => {
   try {
     const id = req.params.id;
+    const name = req.params.id;
+    const convertDishName = name.replaceAll('-', ' ');
 
-    const recipe = await Recipe.findById(id);
+    // const recipe = await Recipe.findById(id);
+    const recipe = await Recipe.find({
+      name: `${convertDishName[0].toUpperCase() + convertDishName.slice(1)}`,
+    });
 
     if (!recipe) {
       return next(new AppError('No recipe found with that ID!', 404));

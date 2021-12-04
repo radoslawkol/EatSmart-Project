@@ -254,6 +254,10 @@
   &__dishName {
     text-align: center;
   }
+  &__link {
+    text-decoration: none;
+    color: $font-basic-color;
+  }
 }
 
 .slick-next::before,

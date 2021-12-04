@@ -422,6 +422,11 @@ body {
   text-align: center;
 }
 
+.slide__link {
+  text-decoration: none;
+  color: #2b2a2a;
+}
+
 .slick-next::before,
 .slick-prev::before {
   color: black !important;
