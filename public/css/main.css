@@ -1369,22 +1369,21 @@ body {
 
 .aboutHeader__images {
   position: relative;
-  margin-top: 4rem;
 }
 
 @media (min-width: 768px) {
   .aboutHeader__images {
+    margin-top: 4rem;
     top: -10rem;
   }
 }
 
 .aboutHeader__img {
   position: absolute;
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 4rem 0;
   border-radius: 50%;
   -o-object-position: center;
      object-position: center;
@@ -1396,6 +1395,7 @@ body {
 
 @media (min-width: 576px) {
   .aboutHeader__img {
+    margin: 4rem 0;
     width: 18rem;
     height: 18rem;
   }
@@ -1412,6 +1412,13 @@ body {
   .aboutHeader__img {
     width: 18rem;
     height: 18rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .aboutHeader__img {
+    width: 22rem;
+    height: 22rem;
   }
 }
 
@@ -1448,7 +1455,7 @@ body {
 @media (min-width: 1200px) {
   .aboutHeader__img--2 {
     top: 0;
-    left: 40%;
+    left: 45%;
   }
 }
 
@@ -1459,7 +1466,7 @@ body {
 
 @media (min-width: 1200px) {
   .aboutHeader__img--3 {
-    top: 6rem;
+    top: 3rem;
     left: 70%;
   }
 }
