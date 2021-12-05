@@ -438,10 +438,34 @@ body {
 
 .dishCard__img {
   width: 100%;
-  max-height: 25rem;
+  height: 18rem;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .dishCard__img {
+    height: 22rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .dishCard__img {
+    height: 30rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .dishCard__img {
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .dishCard__img {
+    height: 25rem;
+  }
 }
 
 .dishCard__title {
