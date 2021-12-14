@@ -13,7 +13,7 @@ const renderRecipes = function (img, name, id) {
           <img
             src="${img}"
             alt="${name}"
-            class="dishCard__img mainRecipies__dishCard-img"
+            class="dishCard__img mainRecipies__dishCard-img" loading="lazy"
           />
           <h3 class="dishCard__title mainRecipies__dishCard-title">${name}</h3>
           <button class="btn btn--orange"><a href="/przepisy/${id}" class="btn__link">Sprawdź</a></button>
@@ -88,6 +88,9 @@ const fetchRecipes = async function (page = '0') {
     data.recipes.forEach((recipe) => {
       renderRecipes(recipe.image, recipe.name, recipe._id);
     });
+
+    window.scrollTo(0, 0);
+
     recipesContainer.addEventListener('click', function (e) {
       const card = e.target.closest('.mainRecipies__dishCard');
       if (card) {
