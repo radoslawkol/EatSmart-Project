@@ -70,6 +70,20 @@ body {
   }
 }
 
+.mainArticle__sub {
+  margin-top: 4rem;
+  font-size: 2.2rem;
+}
+
+.mainArticle__strong {
+  font-size: 1.8rem;
+}
+
+.mainArticle__li {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
 .btn {
   border: 2px solid #e1a126;
   border-radius: 5px;
