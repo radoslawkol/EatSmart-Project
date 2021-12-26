@@ -2649,6 +2649,7 @@ body {
 .headerArticle {
   position: relative;
   max-width: 100vw;
+  margin-top: 5rem;
 }
 
 .headerArticle__img {

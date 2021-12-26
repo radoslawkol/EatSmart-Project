@@ -10,7 +10,7 @@ const mediaQueryNav = window.matchMedia('(min-width: 992px)');
 const fetchArticles = async (isCarousel) => {
   try {
     const res = await fetch(
-      `https://guarded-reaches-99642.herokuapp.com/api/v1/articles?sort=-date&&fields=title,_id`
+      `https://smakujzdrowo.pl/api/v1/articles?sort=-date&&fields=title,_id`
     );
     const { data } = await res.json();
 
@@ -56,7 +56,7 @@ mediaQueryNav.addEventListener('change', changeContent);
 const getLatestDishes = async function () {
   try {
     const res = await fetch(
-      `https://guarded-reaches-99642.herokuapp.com/api/v1/recipes?fields=name,_id,image&page=0&limit=8&sort=-date`
+      `https://smakujzdrowo.pl/api/v1/recipes?fields=name,_id,image&page=0&limit=8&sort=-date`
     );
     const { data } = await res.json();
 
@@ -92,7 +92,7 @@ listenToEvent();
 const getCarousel = async function () {
   try {
     const res = await fetch(
-      `https://guarded-reaches-99642.herokuapp.com/api/v1/recipes?fields=_id,image&page=0&limit=5&sort=date`
+      `https://smakujzdrowo.pl/api/v1/recipes?fields=_id,image&page=0&limit=5&sort=date`
     );
     const { data } = await res.json();
 
