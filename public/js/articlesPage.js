@@ -11,7 +11,7 @@ const renderArticles = function (articles) {
             ${article.description}
             </p>
             <button class="articleCard__btn btn btn--orange">
-              <a href="/articles/${article._id}" class="btn__link">Czytaj więcej</a>
+              <a href="/artykuly/${article._id}" class="btn__link">Czytaj więcej</a>
             </button>
           </div>`;
     articlesContainer.insertAdjacentHTML('afterbegin', html);
