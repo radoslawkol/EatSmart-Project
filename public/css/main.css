@@ -1778,7 +1778,7 @@ body {
   .footer__container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: (1fr);
         grid-template-columns: repeat(3, 1fr);
     justify-items: center;
   }
@@ -2739,7 +2739,7 @@ body {
 
 .mainArticle__author {
   margin: 1rem 0;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .mainArticle__img {
