@@ -21,6 +21,7 @@ const fetchData = async function () {
     const { data } = await res.json();
 
     const { recipe } = data;
+    console.log(recipe)
 
     // Put data to the HTML
     document.title = `${recipe.name} - Przepis | Smakuj Zdrowo`;

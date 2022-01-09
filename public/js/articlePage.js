@@ -14,6 +14,7 @@ const fetchData = async function () {
     const { data } = await res.json();
 
     const { article } = data;
+    console.log(article)
 
     // Put data to the HTML
     document.title = `${article.title} - Smakuj Zdrowo`;
