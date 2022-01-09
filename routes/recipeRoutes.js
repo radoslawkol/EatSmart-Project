@@ -4,6 +4,6 @@ const recipeController = require('./../controllers/recipeController');
 const router = express.Router();
 
 router.route('/').post(recipeController.createRecipe).get(recipeController.getAllRecipes);
-router.route('/:id').get(recipeController.getRecipe);
+router.route('/:slug').get(recipeController.getRecipe);
 
 module.exports = router;

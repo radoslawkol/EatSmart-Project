@@ -20,9 +20,9 @@ exports.createArticle = async (req, res, next) => {
 };
 exports.getArticle = async (req, res, next) => {
   try {
-    const id = req.params.id;
-
-    const article = await Article.findOne({slug: id});
+    const slugStr = req.params.slug;
+    console.log(slugStr)
+    const article = await Article.findOne({slug: slugStr});
 
     if (!article) {
       return next(AppError('No article find with that ID', 404));
