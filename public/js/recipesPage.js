@@ -204,7 +204,7 @@ const fetchByCategory = async function (e) {
       recipesContainer.innerHTML = '';
       document.querySelector('.paginationBox__list').innerHTML = '';
       document.querySelector('#backToAllRecipesBtn').style.display = 'block';
-      data.recipes.forEach((recipe) => renderRecipes(recipe.image, recipe.name, recipe._id));
+      data.recipes.forEach((recipe) => renderRecipes(recipe.image, recipe.name, recipe.slug));
     }
   } catch (err) {
     console.error(err.message);
