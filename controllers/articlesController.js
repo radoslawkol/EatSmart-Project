@@ -20,6 +20,7 @@ exports.createArticle = async (req, res, next) => {
 };
 exports.getArticle = async (req, res, next) => {
   try {
+    console.log(req.params)
     const slugStr = req.params.slug;
     console.log(slugStr)
     const article = await Article.findOne({slug: slugStr});
