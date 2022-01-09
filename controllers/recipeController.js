@@ -65,8 +65,8 @@ exports.getAllRecipes = async (req, res, next) => {
 exports.getRecipe = async (req, res, next) => {
   try {
     const id = req.params.id;
-
-    const recipe = await Recipe.findById(id);
+    console.log(id)
+    const recipe = await Recipe.findOne({slug: id});
 
     if (!recipe) {
       return next(new AppError('No recipe found with that ID!', 404));

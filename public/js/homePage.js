@@ -10,7 +10,7 @@ const mediaQueryNav = window.matchMedia('(min-width: 992px)');
 const fetchArticles = async (isCarousel) => {
   try {
     const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/articles?sort=-date&&fields=title,_id`
+      `https://smakujzdrowo.pl/api/v1/articles?sort=-date&&fields=title,_id,slug`
     );
     const { data } = await res.json();
 
@@ -18,7 +18,7 @@ const fetchArticles = async (isCarousel) => {
     let articlesElementsHtml = '';
     data.articles.forEach((article) => {
       const articleHtml = ` <li class="mainHomePage__item">
-              <a href="/artykuly/${article._id}" class="mainHomePage__link">${article.title}</a>
+              <a href="/artykuly/${article.slug}" class="mainHomePage__link">${article.title}</a>
             </li>`;
       articlesElementsHtml += articleHtml;
     });
@@ -56,7 +56,7 @@ mediaQueryNav.addEventListener('change', changeContent);
 const getLatestDishes = async function () {
   try {
     const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?fields=name,_id,image&page=0&limit=8&sort=-date`
+      `https://smakujzdrowo.pl/api/v1/recipes?fields=name,_id,image,slug&page=0&limit=8&sort=-date`
     );
     const { data } = await res.json();
 
@@ -64,7 +64,7 @@ const getLatestDishes = async function () {
 
     data.recipes.forEach((recipe) => {
       const cardHtml = `
-     <div class="dishCard mainHomePage__dishCard" data-id="${recipe._id}">
+     <div class="dishCard mainHomePage__dishCard" data-id="${recipe.slug}">
             <img
               src="${recipe.image}"
               alt="${recipe.name}"
@@ -72,7 +72,7 @@ const getLatestDishes = async function () {
             />
   
             <h3 class="dishCard__title mainHomePage__dishCard-title">${recipe.name}</h3>
-            <button class="btn btn--orange"><a href="przepisy/${recipe._id}" class="btn__link">Sprawdź</a></button>
+            <button class="btn btn--orange"><a href="przepisy/${recipe.slug}" class="btn__link">Sprawdź</a></button>
           </div>
     `;
       mainHomePageLatestdishes.innerHTML += cardHtml;
@@ -89,28 +89,28 @@ getLatestDishes();
 listenToEvent();
 
 // CAROUSEL
-const getCarousel = async function () {
-  try {
-    const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?fields=_id,image&page=0&limit=5&sort=date`
-    );
-    const { data } = await res.json();
+// const getCarousel = async function () {
+//   try {
+//     const res = await fetch(
+//       `https://smakujzdrowo.pl/api/v1/recipes?fields=_id,image&page=0&limit=5&sort=date`
+//     );
+//     const { data } = await res.json();
 
-    data.recipes.forEach((recipe) => {
-      const html = `
-      <div class="slide headerHomePage__slide">
-        <img src="${recipe.image}" alt="${recipe.name}" class="slide__img" />
-      </div>
-      `;
+//     data.recipes.forEach((recipe) => {
+//       const html = `
+//       <div class="slide headerHomePage__slide">
+//         <img src="${recipe.image}" alt="${recipe.name}" class="slide__img" />
+//       </div>
+//       `;
 
-      headerHomePageSlick.innerHTML += html;
-    });
-  } catch (err) {
-    err.message;
-  }
-};
+//       headerHomePageSlick.innerHTML += html;
+//     });
+//   } catch (err) {
+//     err.message;
+//   }
+// };
 
-getCarousel();
+// getCarousel();
 
 function listenToEvent() {
   mainHomePageLatestdishes.addEventListener('click', function (e) {

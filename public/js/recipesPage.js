@@ -7,16 +7,16 @@ let searchCharacters = [];
 
 const resultsPerPage = 12;
 
-const renderRecipes = function (img, name, id) {
+const renderRecipes = function (img, name, slug) {
   const html = `
-  <div class="dishCard mainRecipies__dishCard" data-id="${id}">
+  <div class="dishCard mainRecipies__dishCard" data-id="${slug}">
           <img
             src="${img}"
             alt="${name}"
             class="dishCard__img mainRecipies__dishCard-img" loading="lazy"
           />
           <h3 class="dishCard__title mainRecipies__dishCard-title">${name}</h3>
-          <button class="btn btn--orange"><a href="/przepisy/${id}" class="btn__link">Sprawdź</a></button>
+          <button class="btn btn--orange"><a href="/przepisy/${slug}" class="btn__link">Sprawdź</a></button>
         </div>
     `;
 
@@ -27,7 +27,7 @@ const partialSearch = async function (recipeName) {
   try {
     recipeName = recipeName.toLowerCase();
     const response = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?fields=image,name,_id`
+      `https://smakujzdrowo.pl/api/v1/recipes?fields=image,name,_id,slug`
     );
     const { data } = await response.json();
     searchCharacters = data.recipes;
@@ -35,7 +35,6 @@ const partialSearch = async function (recipeName) {
       return character.name.toLowerCase().includes(recipeName);
     });
     if (filteredCharacters.length === 0) {
-      console.log('not found');
       recipesContainer.innerHTML = `
       <p id="errorRecipeNotFound">Nie znaleziono przepisu o takiej nazwie!</p>`;
       document.querySelector('.paginationBox__list').innerHTML = '';
@@ -44,7 +43,7 @@ const partialSearch = async function (recipeName) {
     }
 
     filteredCharacters.forEach((recipe) => {
-      renderRecipes(recipe.image, recipe.name, recipe._id);
+      renderRecipes(recipe.image, recipe.name, recipe.slug);
     });
 
     document.querySelector('.paginationBox__list').innerHTML = '';
@@ -86,7 +85,7 @@ const fetchRecipes = async function (page = '0') {
     const { data } = await res.json();
 
     data.recipes.forEach((recipe) => {
-      renderRecipes(recipe.image, recipe.name, recipe._id);
+      renderRecipes(recipe.image, recipe.name, recipe.slug);
     });
 
     window.scrollTo(0, 0);
@@ -148,7 +147,6 @@ const renderPaginationBox = async function () {
         e.preventDefault();
 
         const pageNum = changeActivePage(this);
-        console.log(pageNum);
         fetchRecipes(pageNum);
       });
     }

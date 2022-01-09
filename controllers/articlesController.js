@@ -22,7 +22,7 @@ exports.getArticle = async (req, res, next) => {
   try {
     const id = req.params.id;
 
-    const article = await Article.findById(id);
+    const article = await Article.findOne({slug: id});
 
     if (!article) {
       return next(AppError('No article find with that ID', 404));
