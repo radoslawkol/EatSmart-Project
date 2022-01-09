@@ -17,19 +17,19 @@ const fetchData = async function () {
     console.log(article)
 
     // Put data to the HTML
-    document.title = `${article.title} - Smakuj Zdrowo`;
+    document.title = `${article[0].title} - Smakuj Zdrowo`;
     document
       .querySelector('meta[property="og:title"]')
-      .setAttribute('content', `${article.title} - Smakuj Zdrowo`);
-    headerImg.setAttribute('src', article.headerImg);
-    headerImg.setAttribute('alt', article.headerImgAlt);
-    headerHeading.textContent = article.title;
-    date.textContent = ` ${new Date(article.date).getDate()}.${
-      new Date(article.date).getMonth() + 1
-    }.${new Date(article.date).getFullYear()}`;
-    author.textContent += article.author;
+      .setAttribute('content', `${article[0].title} - Smakuj Zdrowo`);
+    headerImg.setAttribute('src', article[0].headerImg);
+    headerImg.setAttribute('alt', article[0].headerImgAlt);
+    headerHeading.textContent = article[0].title;
+    date.textContent = ` ${new Date(article[0].date).getDate()}.${
+      new Date(article[0].date).getMonth() + 1
+    }.${new Date(article[0].date).getFullYear()}`;
+    author.textContent += article[0].author;
 
-    textContainer.innerHTML = article.descriptionHTML;
+    textContainer.innerHTML = article[0].descriptionHTML;
   } catch (err) {
     console.error(err.message);
   }
