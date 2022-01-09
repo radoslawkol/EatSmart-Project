@@ -21,7 +21,6 @@ const fetchData = async function () {
     const { data } = await res.json();
 
     const { recipe } = data;
-    console.log(recipe)
 
     // Put data to the HTML
     document.title = `${recipe[0].name} - Przepis | Smakuj Zdrowo`;
@@ -43,7 +42,7 @@ const fetchData = async function () {
     dishCalories.textContent = recipe[0].calories + ' ' + 'kcal';
 
     // generate and fill ingredients table
-    recipe.ingredients.forEach((i) => {
+    recipe[0].ingredients.forEach((i) => {
       const html = ` <tr class="ingredientsTable__row">
             <td class="ingredientsTable__cell">${i.ingredient}</td>
             <td class="ingredientsTable__cell">${i.quantity} ${i.quantityType}</td>
