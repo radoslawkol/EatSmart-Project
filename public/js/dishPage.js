@@ -23,26 +23,26 @@ const fetchData = async function () {
     const { recipe } = data;
 
     // Put data to the HTML
-    document.title = `${recipe[0].name} - Przepis | Smakuj Zdrowo`;
+    document.title = `${recipe.name} - Przepis | Smakuj Zdrowo`;
     document
       .querySelector('meta[property="og:title"]')
-      .setAttribute('content', `${recipe[0].name} - Przepis | Smakuj Zdrowo`);
-    dishTitle.textContent = recipe[0].name;
+      .setAttribute('content', `${recipe.name} - Przepis | Smakuj Zdrowo`);
+    dishTitle.textContent = recipe.name;
     dishImg.style.display = 'block';
     dishImg.style.margin = '0 auto';
     loader.style.display = 'none';
-    dishImg.setAttribute('src', `${recipe[0].image}`);
-    dishImg.setAttribute('alt', `${recipe[0].name}`);
-    dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe[0].time} min`;
-    dishDifficulty.innerHTML = `<i class="far fa-star headerDish__difficulty-icon"></i> ${recipe[0].difficulty}`;
-    dishText.innerHTML = recipe[0].preparation;
-    dishCarbohydratesQuantity.textContent = recipe[0].carbohydrates + 'g';
-    dishProteinQuantity.textContent = recipe[0].protein + 'g';
-    dishFatQuantity.textContent = recipe[0].fat + 'g';
-    dishCalories.textContent = recipe[0].calories + ' ' + 'kcal';
+    dishImg.setAttribute('src', `${recipe.image}`);
+    dishImg.setAttribute('alt', `${recipe.name}`);
+    dishTime.innerHTML = `<span class="far fa-clock headerDish__time-icon"></span> ${recipe.time} min`;
+    dishDifficulty.innerHTML = `<i class="far fa-star headerDish__difficulty-icon"></i> ${recipe.difficulty}`;
+    dishText.innerHTML = recipe.preparation;
+    dishCarbohydratesQuantity.textContent = recipe.carbohydrates + 'g';
+    dishProteinQuantity.textContent = recipe.protein + 'g';
+    dishFatQuantity.textContent = recipe.fat + 'g';
+    dishCalories.textContent = recipe.calories + ' ' + 'kcal';
 
     // generate and fill ingredients table
-    recipe[0].ingredients.forEach((i) => {
+    recipe.ingredients.forEach((i) => {
       const html = ` <tr class="ingredientsTable__row">
             <td class="ingredientsTable__cell">${i.ingredient}</td>
             <td class="ingredientsTable__cell">${i.quantity} ${i.quantityType}</td>
