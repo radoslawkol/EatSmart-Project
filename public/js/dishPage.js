@@ -15,14 +15,12 @@ const loader = document.querySelector('.loader');
 const fetchData = async function () {
   try {
     const url = location.pathname.split('/');
-    // const id = url[url.length - 1];
-    const slug = url[url.length - 1]
-    const res = await fetch(`https://smakujzdrowo.pl/api/v1/recipes/${slug}`);
+    const slug = url[url.length - 1];
+    const res = await fetch(`https://smakuj-zdrowo.herokuapp.com/api/v1/recipes/${slug}`);
     const { data } = await res.json();
 
     const { recipe } = data;
 
-    // Put data to the HTML
     document.title = `${recipe.name} - Przepis | Smakuj Zdrowo`;
     document
       .querySelector('meta[property="og:title"]')

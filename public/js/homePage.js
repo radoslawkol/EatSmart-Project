@@ -10,11 +10,10 @@ const mediaQueryNav = window.matchMedia('(min-width: 992px)');
 const fetchArticles = async (isCarousel) => {
   try {
     const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/articles?sort=-date&&fields=title,_id,slug`
+      `https://smakuj-zdrowo.herokuapp.com/api/v1/articles?sort=-date&&fields=title,_id,slug`
     );
     const { data } = await res.json();
 
-    // if (isCarousel) return data;
     let articlesElementsHtml = '';
     data.articles.forEach((article) => {
       const articleHtml = ` <li class="mainHomePage__item">
@@ -56,7 +55,7 @@ mediaQueryNav.addEventListener('change', changeContent);
 const getLatestDishes = async function () {
   try {
     const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?fields=name,_id,image,slug&page=0&limit=8&sort=-date`
+      `https://smakuj-zdrowo.herokuapp.com/api/v1/recipes?fields=name,_id,image,slug&page=0&limit=8&sort=-date`
     );
     const { data } = await res.json();
 
@@ -87,30 +86,6 @@ const getLatestDishes = async function () {
 };
 getLatestDishes();
 listenToEvent();
-
-// CAROUSEL
-// const getCarousel = async function () {
-//   try {
-//     const res = await fetch(
-//       `https://smakujzdrowo.pl/api/v1/recipes?fields=_id,image&page=0&limit=5&sort=date`
-//     );
-//     const { data } = await res.json();
-
-//     data.recipes.forEach((recipe) => {
-//       const html = `
-//       <div class="slide headerHomePage__slide">
-//         <img src="${recipe.image}" alt="${recipe.name}" class="slide__img" />
-//       </div>
-//       `;
-
-//       headerHomePageSlick.innerHTML += html;
-//     });
-//   } catch (err) {
-//     err.message;
-//   }
-// };
-
-// getCarousel();
 
 function listenToEvent() {
   mainHomePageLatestdishes.addEventListener('click', function (e) {

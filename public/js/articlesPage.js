@@ -19,7 +19,7 @@ const renderArticles = function (articles) {
 };
 
 const fetchArticles = async function () {
-  const res = await fetch(`https://smakujzdrowo.pl/api/v1/articles?sort=date`);
+  const res = await fetch(`https://smakuj-zdrowo.herokuapp.com/api/v1/articles?sort=date`);
   const { data } = await res.json();
   const { articles } = data;
 

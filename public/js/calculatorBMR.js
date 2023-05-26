@@ -32,11 +32,9 @@ submitBtn.addEventListener('click', (e) => {
   let bmr = null;
 
   if (maleInput.checked) {
-    //prettier-ignore
-    bmr = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
+    bmr = 66.47 + 13.75 * weight + 5.003 * height - 6.755 * age;
   } else if (femaleInput.checked) {
-    //prettier-ignore
-    bmr = 655.1 +( 9.563 * weight) + (1.850 * height) - (4.676 * age);
+    bmr = 655.1 + 9.563 * weight + 1.85 * height - 4.676 * age;
   } else {
     errorMessageBMR.style.display = 'block';
   }

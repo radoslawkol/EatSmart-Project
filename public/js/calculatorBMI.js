@@ -1,5 +1,3 @@
-// BMI CALCULATOR
-
 const weightInput = document.querySelector('#weight');
 const heightInput = document.querySelector('#height');
 const submitBtn = document.querySelector('.calculatorBMI__submit');

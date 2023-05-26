@@ -10,12 +10,11 @@ const fetchData = async function () {
   try {
     const url = location.pathname.split('/');
     const id = url[url.length - 1];
-    const res = await fetch(`https://smakujzdrowo.pl/api/v1/articles/${id}`);
+    const res = await fetch(`https://smakuj-zdrowo.herokuapp.com/api/v1/articles/${id}`);
     const { data } = await res.json();
 
     const { article } = data;
 
-    // Put data to the HTML
     document.title = `${article.title} - Smakuj Zdrowo`;
     document
       .querySelector('meta[property="og:title"]')

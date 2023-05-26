@@ -27,7 +27,7 @@ const partialSearch = async function (recipeName) {
   try {
     recipeName = recipeName.toLowerCase();
     const response = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?fields=image,name,_id,slug`
+      `https://smakuj-zdrowo.herokuapp.com/api/v1/recipes?fields=image,name,_id,slug`
     );
     const { data } = await response.json();
     searchCharacters = data.recipes;
@@ -80,7 +80,7 @@ const fetchRecipes = async function (page = '0') {
   try {
     recipesContainer.textContent = '';
     const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?page=${page}&limit=${resultsPerPage}`
+      `https://smakuj-zdrowo.herokuapp.com/api/v1/recipes?page=${page}&limit=${resultsPerPage}`
     );
     const { data } = await res.json();
 
@@ -107,9 +107,7 @@ fetchRecipes();
 
 const renderPaginationBox = async function () {
   try {
-    const res = await fetch(
-      `https://smakujzdrowo.pl/api/v1/recipes?fields=results`
-    );
+    const res = await fetch(`/api/v1/recipes?fields=results`);
     const data = await res.json();
     const results = data.results;
     const pages = Math.ceil(results / resultsPerPage);
@@ -196,9 +194,7 @@ const fetchByCategory = async function (e) {
   try {
     if (e.target.className === 'headerRecipies__categoryBtn') {
       const category = e.target.dataset.category;
-      const res = await fetch(
-        `https://smakujzdrowo.pl/api/v1/recipes?category=${category}`
-      );
+      const res = await fetch(`/api/v1/recipes?category=${category}`);
       const { data } = await res.json();
 
       recipesContainer.innerHTML = '';

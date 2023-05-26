@@ -1,5 +1,3 @@
-// SLICK INITIALIZATION
-
 $('.slick').slick({
   lazyLoad: 'ondemand',
   dots: true,
