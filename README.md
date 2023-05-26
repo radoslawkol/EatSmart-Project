@@ -1,4 +1,4 @@
-# EatSmart Project
+# Smakuj Zdrowo Project
 ### Website created for purpose of participating in Zwolnieni z Teorii
 Zwolnieni z Teorii is an internet platform created by Zwolnieni z Teorii Foundation (aka. ZWZT), the largest educational foundation in Poland.
 
