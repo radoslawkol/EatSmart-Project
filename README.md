@@ -1,17 +1,47 @@
-# Smakuj Zdrowo Project
-### Website created for purpose of participating in Zwolnieni z Teorii
-Zwolnieni z Teorii is an internet platform created by Zwolnieni z Teorii Foundation (aka. ZWZT), the largest educational foundation in Poland.
+# Smakuj Zdrowo
+### Website created for purpose of participating in Zwolnieni z Teorii and realizing a social project.
+
+Zwolnieni z Teorii is an internet platform established by the renowned Zwolnieni z Teorii Foundation. This platform enables participants to develop and execute their own social projects with the aim of effecting significant positive change within their communities.
+Participants hone their leadership and project management skills. Through this platform, individuals are provided with a wealth of resources, mentoring, and support to aid them in their project development. This includes access to a comprehensive range of educational materials, mentor guidance and a supportive network.
+
 
 ## Story
-The purpose of project was to encourage people to eat healthy. We worked with team running social media. I created this page to display our recipes. 
-Creating this page was a great experience for me, beacause I learnt Node.js and Express. I created my small API with recipes and articles. Moreover it was my first production website, which was a breakthrough moment in my learning process.
+I created a team of pepole who wanted to work on the social project. We came to conclusion that the subject of our project will be about promoting healthy eating habits and giving examples of easy, delicious and nutritious meals. We wanted to create a website, where users could find recipes for healthy meals. I was responsible for leading a project and building a website.
+
+Developing this website proved to be an invaluable experience for me as it provided an opportunity to enhance my skills in Node.js and Express. I designed and implemented a small-scale API to handle recipes and articles displayed on the website. This project was a significant milestone in my learning journey as it was my first production-level website. The project achieved a wide audience that time thanks to a professional marketing and commitment of the entire team. 
 
 
-## What you can do?
-* search for recipes by category or with searchbar
-* read articles 
-* find some info about us and our action
-* calculate your BMI
-* calculate your BMR
+## Main Features
+* searching recipes by category or name
+* articles section 
+* info about project and faq
+* BMI calculator
+* BMR calculator
 
-## API
+
+## Technology used
+- JavaScript
+- ejs
+- Express
+- MongoDB
+- Postman
+- Figma
+- mongoose
+- slugify
+- dotenv
+
+## API Endpoints
+
+### Recipes 
+- Create a recipe - `POST /api/v1/recipes`
+- Get all recipes - `GET /api/v1/recipes`
+- Get a recipe by slug - `GET /api/v1/recipes/:slug`
+- Get a recipes by name - `GET /api/v1/recipes?name=${recipeName}`
+- Get recipes (pagination) - `GET /api/v1/recipes?page=${pageNumber}&limit=${limitNumber}`
+- Get recipes by category - `GET /api/v1/recipes?category=${category}`
+
+### Articles
+- Create an article - `POST /api/v1/articles`
+- Get all articles - `GET /api/v1/articles`
+- Get an article - `GET /api/v1/articles/:slug`
+
