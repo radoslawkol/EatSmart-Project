@@ -10,6 +10,10 @@ I created a team of pepole who wanted to work on the social project. We came to 
 
 Developing this website proved to be an invaluable experience for me as it provided an opportunity to enhance my skills in Node.js and Express. I designed and implemented a small-scale API to handle recipes and articles displayed on the website. This project was a significant milestone in my learning journey as it was my first production-level website. The project achieved a wide audience that time thanks to a professional marketing and commitment of the entire team. 
 
+## Screenshots
+
+<img src='https://res.cloudinary.com/detfhw9ll/image/upload/v1685205077/github%20docs/smakujzdrowo/smakujzdrowo-hero_x2timr.png' width=900 height=454/><img src='https://res.cloudinary.com/detfhw9ll/image/upload/v1685205076/github%20docs/smakujzdrowo/smakujzdrowo-home_t4uurj.png' width=900 height=454/><img src='https://res.cloudinary.com/detfhw9ll/image/upload/v1685205078/github%20docs/smakujzdrowo/smakujzdrowo-photo_yisk1k.png' width=900 height=454/><img src='https://res.cloudinary.com/detfhw9ll/image/upload/v1685205074/github%20docs/smakujzdrowo/smakujzdrowo-bmr_biwafe.png' width=900 height=454/>
+
 
 ## Main Features
 * searching recipes by category or name
