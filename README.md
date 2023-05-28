@@ -1,4 +1,6 @@
 # Smakuj Zdrowo
+demo: https://smakuj-zdrowo.onrender.com/
+
 ### Website created for purpose of participating in Zwolnieni z Teorii and realizing a social project.
 
 Zwolnieni z Teorii is an internet platform established by the renowned Zwolnieni z Teorii Foundation. This platform enables participants to develop and execute their own social projects with the aim of effecting significant positive change within their communities.
