@@ -9,9 +9,7 @@ const mediaQueryNav = window.matchMedia('(min-width: 992px)');
 
 const fetchArticles = async (isCarousel) => {
   try {
-    const res = await fetch(
-      `https://smakuj-zdrowo.herokuapp.com/api/v1/articles?sort=-date&&fields=title,_id,slug`
-    );
+    const res = await fetch(`/api/v1/articles?sort=-date&&fields=title,_id,slug`);
     const { data } = await res.json();
 
     let articlesElementsHtml = '';
@@ -54,9 +52,7 @@ mediaQueryNav.addEventListener('change', changeContent);
 
 const getLatestDishes = async function () {
   try {
-    const res = await fetch(
-      `https://smakuj-zdrowo.herokuapp.com/api/v1/recipes?fields=name,_id,image,slug&page=0&limit=8&sort=-date`
-    );
+    const res = await fetch(`/api/v1/recipes?fields=name,_id,image,slug&page=0&limit=8&sort=-date`);
     const { data } = await res.json();
 
     mainHomePageLatestdishes.innerHTML = '';

@@ -16,7 +16,7 @@ const fetchData = async function () {
   try {
     const url = location.pathname.split('/');
     const slug = url[url.length - 1];
-    const res = await fetch(`https://smakuj-zdrowo.herokuapp.com/api/v1/recipes/${slug}`);
+    const res = await fetch(`/api/v1/recipes/${slug}`);
     const { data } = await res.json();
 
     const { recipe } = data;
